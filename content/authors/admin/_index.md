@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Van-Quang Nguyen
+title: Quang Nguyen
 
 # Name pronunciation (optional)
 name_pronunciation: ''
@@ -14,7 +14,7 @@ pronouns: he/him
 
 # Status emoji
 status:
-  icon: 🧠
+  icon: 
 
 # Is this the primary user of the site?
 superuser: true
@@ -36,17 +36,19 @@ profiles:
   - icon: at-symbol
     url: 'mailto:quang.nguyen.jz@riken.jp'
     label: quang.nguyen.jz@riken.jp
+  - icon: custom/gmail
+    url: 'mailto:quangvnai21@gmail.com'
+    label: Personal email
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=qR180McAAAAJ
   - icon: brands/github
     url: https://github.com/quangvnai
 
 interests:
-  - Agentic multimodal large language models
-  - Vision-language document understanding
-  - Traffic behavior prediction and autonomous driving
-  - Hazard and critical scenario reasoning
-  - Remote sensing and environmental intelligence
+  - Large Language Models
+  - Agentic Multimodal Large Language Models
+  - Vision-language understanding
+  - MLLMs applications (autonomous driving, environmental intelligence, etc)
 
 education:
   - area: Ph.D. in Information Sciences
@@ -70,13 +72,15 @@ education:
     date_end: 2017-10-01
     summary: |
       Highest GPA of cohort (3.9/4.0). Focus on machine learning and intelligent systems.
-  - area: Exchange Student – Fostering ASEAN Future Leaders
-    institution: Daejeon University, South Korea
-    icon: ''
-    date_start: 2015-09-01
-    date_end: 2016-08-31
-    summary: |
-      GPA: 4.4/4.5. Full scholarship recipient.
+
+  # - area: Exchange Student – Fostering ASEAN Future Leaders
+  #   institution: Daejeon University, South Korea
+  #   icon: ''
+  #   date_start: 2015-09-01
+  #   date_end: 2016-08-31
+  #   summary: |
+  #     GPA: 4.4/4.5. Full scholarship recipient.
+
 
 work:
   - position: Postdoctoral Researcher
@@ -180,4 +184,4 @@ awards:
       Full scholarship for both Master's and Ph.D. studies.
 ---
 
-Van-Quang Nguyen is a postdoctoral researcher at RIKEN AIP and Tohoku University, recently focusing on (Multimodal) Large Language Models for vision-language understanding and applications (e.g., autonomous driving, and environmental intelligence). He has authored papers at top-tier venues (ECCV, IJCAI, CVPR, FG, CACIE, TIV, etc), accumulating 750+ citations, and mentors graduate researchers on agentic AI systems. He is passionate about bridging scientific research with real-world deployments that improve safety, sustainability, and accessibility.
+Quang Nguyen (full name: Van-Quang Nguyen) is a postdoctoral researcher at RIKEN AIP in the Multimodal Visual Intelligence Team. His recent work centers on Multimodal Large Language Models for vision–language understanding and its applications (e.g., on autonomous driving, environmental intelligence). He has published in leading venues such as ECCV, CVPR, IJCAI, FG, CACIE, and TIV, with over 750 citations, and he mentors graduate students on doing research and building AI systems. He is driven by a commitment to translate scientific advances into practical technologies that enhance sustainability, efficiency, and accessibility. Please reach out for potential collaboration.
