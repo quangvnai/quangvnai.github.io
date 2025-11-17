@@ -1,0 +1,13 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const heroH1 = document.querySelector('#section-resume-biography-3 h1.text-5xl.lg\\:text-6xl');
+    if (heroH1) {
+      // Change to h2
+      const h2 = document.createElement('h2');
+      h2.className = 'text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white leading-tight';
+      h2.textContent = 'Quang Nguyen';
+      heroH1.parentNode.replaceChild(h2, heroH1);
+    }
+  });
+</script>
+

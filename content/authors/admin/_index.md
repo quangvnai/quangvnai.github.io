@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Quang Nguyen
+title: Van-Quang Nguyen
 
 # Name pronunciation (optional)
 name_pronunciation: ''
