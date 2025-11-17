@@ -10,7 +10,7 @@ first_name: Quang
 last_name: Nguyen
 
 # Pronouns (optional)
-pronouns: he/him
+pronouns: ''
 
 # Status emoji
 status:
@@ -23,7 +23,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Postdoctoral Researcher, RIKEN AIP
+role: Postdoc Researcher, RIKEN AIP
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
