@@ -1,0 +1,78 @@
+<style>
+  #section-resume-experience .max-w-prose,
+  #section-resume-skills .max-w-prose,
+  #section-resume-awards .max-w-prose,
+  #section-resume-languages .max-w-prose {
+    max-width: min(100%, 1024px) !important;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  @media (min-width: 1280px) {
+    #section-resume-experience .max-w-prose,
+    #section-resume-skills .max-w-prose,
+    #section-resume-awards .max-w-prose,
+    #section-resume-languages .max-w-prose {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  #section-resume-awards .w-full.p-6 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem 0.85rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  #section-resume-awards .w-full.p-6 > div:nth-of-type(1) {
+    flex: 0 0 auto;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #section-resume-awards .w-full.p-6 > a {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  #section-resume-awards .w-full.p-6 > a h5 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  #section-resume-awards .w-full.p-6 > div:nth-of-type(2) {
+    order: 1;
+    flex: 0 0 auto;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  #section-resume-awards .w-full.p-6 > div:nth-of-type(3) {
+    order: 2;
+    flex: 1 1 100%;
+    margin: 0;
+    font-size: 0.95rem;
+    padding-left: calc(2.25rem + 0.85rem);
+  }
+
+  #section-resume-awards .w-full.p-6 > div:nth-of-type(3)::before {
+    content: '';
+  }
+
+  @media (max-width: 640px) {
+    #section-resume-awards .w-full.p-6 > div:nth-of-type(3) {
+      padding-left: calc(2.25rem + 0.85rem);
+    }
+  }
+</style>
+
