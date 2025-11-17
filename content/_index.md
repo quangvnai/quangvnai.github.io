@@ -46,6 +46,7 @@ sections:
     content:
       title: Publications
       text: ''
+      count: 0
       filters:
         folders:
           - publications
