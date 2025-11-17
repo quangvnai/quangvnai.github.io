@@ -1,20 +1,20 @@
 ---
 # Display name
-title: Alex Johnson
+title: Van-Quang Nguyen
 
 # Name pronunciation (optional)
 name_pronunciation: ''
 
 # Full name (for SEO)
-first_name: Alex
-last_name: Johnson
+first_name: Quang
+last_name: Nguyen
 
 # Pronouns (optional)
 pronouns: he/him
 
 # Status emoji
 status:
-  icon: 🚀
+  icon: 🧠
 
 # Is this the primary user of the site?
 superuser: true
@@ -23,150 +23,161 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Senior AI Research Scientist
+role: Postdoctoral Researcher, RIKEN AIP
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Meta AI
-    url: https://ai.meta.com/
+  - name: RIKEN Center for Advanced Intelligence Project (AIP)
+    url: https://www.riken.jp/en/research/labs/aip/
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:alex.johnson@meta.com'
-    label: E-mail Me
-  - icon: brands/x
-    url: https://twitter.com/AlexAIResearch
-  - icon: brands/github
-    url: https://github.com/alexjohnsonai
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/alexjohnsonai/
+    url: 'mailto:quang.nguyen.jz@riken.jp'
+    label: quang.nguyen.jz@riken.jp
   - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=alexjohnson
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-1825-0097
+    url: https://scholar.google.com/citations?user=qR180McAAAAJ
+  - icon: brands/github
+    url: https://github.com/quangvnai
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Agentic multimodal large language models
+  - Vision-language document understanding
+  - Traffic behavior prediction and autonomous driving
+  - Hazard and critical scenario reasoning
+  - Remote sensing and environmental intelligence
 
 education:
-  - area: PhD Computer Science (AI Focus)
-    institution: Stanford University
-    icon: ""
+  - area: Ph.D. in Information Sciences
+    institution: Tohoku University
+    icon: ''
+    date_start: 2019-10-01
+    date_end: 2022-10-01
+    summary: |
+      Dean's Award. Advisor: Prof. Takayuki Okatani. Research on multimodal perception and instruction-following.
+  - area: Master in Information Sciences
+    institution: Tohoku University
+    icon: ''
+    date_start: 2017-10-01
+    date_end: 2019-10-01
+    summary: |
+      GPA: 4.0/4.0. Thesis on applied computer vision and deep learning.
+  - area: Bachelor in Computer Science
+    institution: Vietnam National University (VNU-UET)
+    icon: ''
+    date_start: 2012-10-01
+    date_end: 2017-10-01
+    summary: |
+      Highest GPA of cohort (3.9/4.0). Focus on machine learning and intelligent systems.
+  - area: Exchange Student – Fostering ASEAN Future Leaders
+    institution: Daejeon University, South Korea
+    icon: ''
     date_start: 2015-09-01
-    date_end: 2019-06-30
+    date_end: 2016-08-31
     summary: |
-      Thesis on _Scaling Laws for Neural Language Models_. Supervised by Prof. Andrew Ng. Published 5 papers in NeurIPS and ICML, with 2 best paper awards.
-    button:
-      text: 'Read Thesis'
-      url: 'https://example.com/thesis.pdf'
-  - area: MS Computer Science
-    institution: Carnegie Mellon University
-    icon: ""
-    date_start: 2013-09-01
-    date_end: 2015-05-31
-    summary: |
-      GPA: 4.0/4.0
-
-      Specialized in machine learning and robotics.
-  - area: BS Computer Science
-    institution: MIT
-    icon: ""
-    date_start: 2009-09-01
-    date_end: 2013-05-31
-    summary: |
-      GPA: 3.9/4.0
-
-      Minored in Mathematics. President of AI Club.
+      GPA: 4.4/4.5. Full scholarship recipient.
 
 work:
-  - position: Senior AI Research Scientist
-    company_name: Meta AI
-    company_url: 'https://ai.meta.com/'
+  - position: Postdoctoral Researcher
+    company_name: RIKEN AIP @ Tohoku University
+    company_url: 'https://www.riken.jp/en/research/labs/aip/'
     icon: ''
-    date_start: 2020-01-01
+    date_start: 2022-11-01
     date_end: ''
-    summary: |2-
-      Leading research on multimodal AI systems. Contributed to Llama 2 and other open-source models. 50+ citations in 3 years.
-  - position: AI Research Intern
-    company_name: OpenAI
-    company_url: 'https://openai.com/'
-    icon: ''
-    date_start: 2019-06-01
-    date_end: 2019-12-31
     summary: |
-      Worked on GPT-3 scaling. Co-authored paper on prompt engineering.
+      Lead research on multimodal large language models for domain-specific perception, planning, and reasoning across robotics, traffic, and environmental intelligence.
+  - position: Machine Learning Research Intern
+    company_name: Preferred Networks
+    company_url: 'https://www.preferred.jp/en/'
+    icon: ''
+    date_start: 2020-08-01
+    date_end: 2020-10-31
+    summary: |
+      Built efficient end-to-end object tracking systems and collaborated with product teams on deployment.
+  - position: Machine Learning Engineer (Part-time)
+    company_name: Laboro.AI
+    company_url: 'https://laboro.ai/'
+    icon: ''
+    date_start: 2018-03-01
+    date_end: 2018-10-31
+    summary: |
+      Developed computer vision models for industrial clients; contributed to face detection and recognition products.
+  - position: Machine Learning Research Intern
+    company_name: Fujitsu Incubation Center
+    company_url: 'https://www.fujitsu.com/'
+    icon: ''
+    date_start: 2017-07-01
+    date_end: 2017-08-31
+    summary: |
+      Prototyped LSTM-based question-answering systems for enterprise knowledge bases.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Technical Skills
+  - name: Programming & Tools
     items:
-      - name: Python & PyTorch
-        description: ''
+      - name: Python, SQL, C/C++, Bash
         percent: 95
         icon: code-bracket
-      - name: Machine Learning
-        description: ''
-        percent: 100
-        icon: chart-bar
-      - name: Cloud Computing (AWS/GCP)
-        description: ''
-        percent: 85
-        icon: cloud
-  - name: Hobbies
-    color: '#eeac02'
-    color_border: '#f0bf23'
-    items:
-      - name: Hiking in the Rockies
-        description: ''
-        percent: 80
-        icon: person-simple-walk
-      - name: Building Custom PCs
-        description: ''
+      - name: PyTorch, Transformers, LangChain
         percent: 90
+        icon: squares-2x2
+      - name: TensorFlow, Keras, Scikit-learn
+        percent: 80
         icon: cpu-chip
-      - name: Sci-Fi Reading
-        description: ''
-        percent: 70
-        icon: book-open
+      - name: LaTeX, Git/GitHub
+        percent: 85
+        icon: document-text
 
 languages:
   - name: English
     percent: 100
-  - name: Spanish
-    percent: 50
+  - name: Japanese
+    percent: 40
+  - name: Vietnamese
+    percent: 100
 
 # Awards.
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
-  - title: Best Paper Award
-    url: https://neurips.cc/
-    date: '2022-12-01'
-    awarder: NeurIPS
-    icon: hero/trophy
-    summary: |
-      Awarded for groundbreaking work on efficient training of large models.
-  - title: AI Innovation Grant
-    url: https://www.nsf.gov/
-    date: '2021-06-15'
-    awarder: National Science Foundation
-    icon: hero/currency-dollar
-    summary: |
-      $500,000 grant for research in ethical AI development.
-  - title: Outstanding PhD Thesis
-    url: https://www.stanford.edu/
-    date: '2019-06-30'
-    awarder: Stanford University
+  - title: Dean's Award for Excellent Achievements
+    url: https://www.tohoku.ac.jp/en/
+    date: '2023-03-01'
+    awarder: Tohoku University
     icon: hero/academic-cap
     summary: |
-      Recognized for contributions to scaling laws in deep learning.
+      Recognized for outstanding Ph.D. research in multimodal AI.
+  - title: Best Presentation Award (Ph.D. Research)
+    url: https://www.tohoku.ac.jp/en/
+    date: '2022-12-01'
+    awarder: Tohoku University
+    icon: hero/trophy
+    summary: |
+      Awarded for top Ph.D. research presentation in Information Sciences.
+  - title: Winner, Alfred Challenge
+    url: https://www.ecva.net/
+    date: '2020-08-01'
+    awarder: AllenAI & Google (ECCV 2020)
+    icon: hero/star
+    summary: |
+      First place for interactive instruction-following agent competition.
+  - title: Honda Young Engineer Scientist Award + Fellowship
+    url: https://www.hondafoundation.jp/en/
+    date: '2019-06-01'
+    awarder: Honda Foundation
+    icon: hero/academic-cap
+    summary: |
+      Selected among top engineering students in Vietnam and Japan.
+  - title: Japanese Government (MEXT) Scholarship
+    url: https://www.studyinjapan.go.jp/en/
+    date: '2017-04-01'
+    awarder: MEXT
+    icon: hero/certificate
+    summary: |
+      Full scholarship for both Master's and Ph.D. studies.
 ---
 
-Alex Johnson is a Senior AI Research Scientist at Meta AI, where he leads groundbreaking work on large language models and multimodal systems. His research has been published in top conferences like NeurIPS and ICML, with over 10,000 citations. Alex is passionate about pushing the boundaries of AI while ensuring ethical development. Outside of work, he enjoys hiking in the Rockies, building custom PCs, and mentoring the next generation of AI talent.
+Van-Quang Nguyen is a postdoctoral researcher at RIKEN AIP and Tohoku University, recently focusing on (Multimodal) Large Language Models for vision-language understanding and applications (e.g., autonomous driving, and environmental intelligence). He has authored papers at top-tier venues (ECCV, IJCAI, CVPR, FG, CACIE, TIV, etc), accumulating 750+ citations, and mentors graduate researchers on agentic AI systems. He is passionate about bridging scientific research with real-world deployments that improve safety, sustainability, and accessibility.
