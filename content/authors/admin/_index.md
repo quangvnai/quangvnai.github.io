@@ -27,7 +27,7 @@ role: Postdoc Researcher, RIKEN AIP
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: RIKEN Center for Advanced Intelligence Project (AIP)
+  - name: RIKEN Center for Advanced Intelligence Project
     url: https://www.riken.jp/en/research/labs/aip/
 
 # Social network links
@@ -66,7 +66,7 @@ education:
     summary: |
       GPA: 4.0/4.0. Thesis on applied computer vision and deep learning.
   - area: Bachelor in Computer Science
-    institution: Vietnam National University (VNU-UET)
+    institution: Vietnam National University, UET
     icon: ''
     date_start: 2012-10-01
     date_end: 2017-10-01
@@ -84,7 +84,7 @@ education:
 
 work:
   - position: Postdoctoral Researcher
-    company_name: RIKEN AIP @ Tohoku University
+    company_name: RIKEN AIP
     company_url: 'https://www.riken.jp/en/research/labs/aip/'
     icon: ''
     date_start: 2022-11-01
@@ -92,7 +92,7 @@ work:
     summary: |
       Lead research on multimodal large language models for domain-specific perception, planning, and reasoning across robotics, traffic, and environmental intelligence.
   - position: Machine Learning Research Intern
-    company_name: Preferred Networks
+    company_name: Preferred Networks, Japan
     company_url: 'https://www.preferred.jp/en/'
     icon: ''
     date_start: 2020-08-01
@@ -100,7 +100,7 @@ work:
     summary: |
       Built efficient end-to-end object tracking systems and collaborated with product teams on deployment.
   - position: Machine Learning Engineer (Part-time)
-    company_name: Laboro.AI
+    company_name: Laboro.AI, Japan
     company_url: 'https://laboro.ai/'
     icon: ''
     date_start: 2018-03-01
@@ -108,7 +108,7 @@ work:
     summary: |
       Developed computer vision models for industrial clients; contributed to face detection and recognition products.
   - position: Machine Learning Research Intern
-    company_name: Fujitsu Incubation Center
+    company_name: Fujitsu, Japan
     company_url: 'https://www.fujitsu.com/'
     icon: ''
     date_start: 2017-07-01
@@ -164,7 +164,7 @@ awards:
   - title: Japanese Government Scholarship (MEXT) for Ph.D. Course
     url: https://www.studyinjapan.go.jp/en/
     date: '2019-01-01'
-    awarder: MEXT
+    awarder: MEXT, Japan
     icon: hero/academic-cap
     summary: |
       Full scholarship for Ph.D. studies (2019-2022).
@@ -175,17 +175,17 @@ awards:
     icon: hero/star
     summary: |
       First place for interactive instruction-following agent competition at ECCV 2020.
-  - title: Honda Young Engineer Scientist Award Plus Ph.D. Fellowship
+  - title: Honda Young Engineer Scientist Award Plus Ph.D. Fellowship from Honda Foundation
     url: https://www.hondafoundation.jp/en/
     date: '2019-01-01'
-    awarder: Honda Foundation
+    awarder: Honda, Japan
     icon: hero/academic-cap
     summary: |
       Selected among top engineering students in Vietnam and Japan, with Ph.D. fellowship support.
   - title: Japanese Government Scholarship (MEXT) for Master Course
     url: https://www.studyinjapan.go.jp/en/
     date: '2017-01-01'
-    awarder: MEXT
+    awarder: MEXT, Japan
     icon: hero/academic-cap
     summary: |
       Full scholarship for Master's studies (2017-2019).
@@ -210,7 +210,7 @@ awards:
       Recognized for outstanding research presentation at the national level.
   - title: Excellent Thesis Award
     date: '2017-01-01'
-    awarder: Vietnam National University
+    awarder: Vietnam National University (UET-VNU)
     icon: hero/academic-cap
     summary: |
       Scored 10/10 for Bachelor's thesis.
@@ -288,7 +288,7 @@ awards:
       Scholarship awarded by Vietnam Telecom Corporation for academic excellence.
   - title: Odon Vallet Scholarship for Top High-School Students
     date: '2011-01-01'
-    awarder: Odon Vallet Foundation, France
+    awarder: Odon Vallet, France
     icon: hero/academic-cap
     summary: |
       Prestigious scholarship for top high-school students in Vietnam.
