@@ -7,12 +7,16 @@ main:
   - name: Summary
     url: /
     weight: 10
-  - name: Curriculum Vitae
-    url: experience/
+  - name: Vitae
+    url: /#experience
     weight: 11
+
+  - name: Experience
+    url: experience/
+    weight: 12
   - name: Publications
     url: /#publications
-    weight: 12
+    weight: 13
   # - name: Talks
   #   url: /#talks
   #   weight: 13

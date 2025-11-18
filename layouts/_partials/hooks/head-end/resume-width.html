@@ -21,7 +21,7 @@
   #section-resume-awards .w-full.p-6 {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.35rem 0.85rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
@@ -45,16 +45,30 @@
     align-items: center;
   }
 
-  #section-resume-awards .w-full.p-6 > a h5 {
+  #section-resume-awards .w-full.p-6 h5 {
+    margin: 0 !important;
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Handle awards without URL links - h5 as direct child */
+  #section-resume-awards .w-full.p-6 > h5 {
+    flex: 1 1 auto;
+    min-width: 0;
     margin: 0;
-    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
   }
 
   #section-resume-awards .w-full.p-6 > div:nth-of-type(2) {
-    order: 1;
+    order: 0;
     flex: 0 0 auto;
     margin: 0;
+    margin-left: auto;
     font-size: 0.95rem;
+    text-align: right;
+    white-space: nowrap;
   }
 
   #section-resume-awards .w-full.p-6 > div:nth-of-type(3) {

@@ -6,7 +6,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: '6rem'
+  spacing: '3rem'
 
 sections:
   - block: resume-biography-3
@@ -29,18 +29,18 @@ sections:
       avatar:
         size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
+      spacing:
+        padding: [0, 0, '0.0rem', 0]
 
-  # - block: collection
-  #   id: papers
-  #   content:
-  #     title: Featured Publications
-  #     filters:
-  #       folders:
-  #         - publications
-  #       featured_only: true
-  #   design:
-  #     view: article-grid
-  #     columns: 2
+  - block: resume-experience
+    id: experience
+    content:
+      username: admin
+    design:
+      date_format: 'January 2006'
+      is_education_first: false
+      spacing:
+        padding: ['2rem', 0, 0, 0]
   - block: collection
     id: publications
     content:
@@ -53,6 +53,25 @@ sections:
         exclude_featured: false
     design:
       view: citation
+      spacing:
+        padding: ['2rem', 0, 0, 0]
+  - block: resume-awards
+    content:
+      title: Awards
+      username: admin
+      count: 0
+  # - block: collection
+  #   id: papers
+  #   content:
+  #     title: Featured Publications
+  #     filters:
+  #       folders:
+  #         - publications
+  #       featured_only: true
+  #   design:
+  #     view: article-grid
+  #     columns: 2
+
   # - block: collection
   #   id: talks
   #   content:
