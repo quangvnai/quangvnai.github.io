@@ -84,7 +84,7 @@ education:
 
 work:
   - position: Postdoctoral Researcher
-    company_name: RIKEN AIP
+    company_name: RIKEN AIP, Tokyo
     company_url: 'https://www.riken.jp/en/research/labs/aip/'
     icon: ''
     date_start: 2022-11-01
@@ -92,7 +92,7 @@ work:
     summary: |
       Lead research on multimodal large language models for domain-specific perception, planning, and reasoning across robotics, traffic, and environmental intelligence.
   - position: Machine Learning Research Intern
-    company_name: Preferred Networks, Japan
+    company_name: Preferred Networks, Tokyo
     company_url: 'https://www.preferred.jp/en/'
     icon: ''
     date_start: 2020-08-01
@@ -100,7 +100,7 @@ work:
     summary: |
       Built efficient end-to-end object tracking systems and collaborated with product teams on deployment.
   - position: Machine Learning Engineer (Part-time)
-    company_name: Laboro.AI, Japan
+    company_name: Laboro.AI, Tokyo
     company_url: 'https://laboro.ai/'
     icon: ''
     date_start: 2018-03-01
@@ -108,7 +108,7 @@ work:
     summary: |
       Developed computer vision models for industrial clients; contributed to face detection and recognition products.
   - position: Machine Learning Research Intern
-    company_name: Fujitsu, Japan
+    company_name: Fujitsu, Tokyo
     company_url: 'https://www.fujitsu.com/'
     icon: ''
     date_start: 2017-07-01
