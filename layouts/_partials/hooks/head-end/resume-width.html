@@ -75,8 +75,11 @@
     order: 2;
     flex: 1 1 100%;
     margin: 0;
+    margin-left: auto;
     font-size: 0.95rem;
-    padding-left: calc(2.25rem + 0.85rem);
+    text-align: right;
+    padding-left: 0;
+    max-width: 100%;
   }
 
   #section-resume-awards .w-full.p-6 > div:nth-of-type(3)::before {
@@ -85,7 +88,8 @@
 
   @media (max-width: 640px) {
     #section-resume-awards .w-full.p-6 > div:nth-of-type(3) {
-      padding-left: calc(2.25rem + 0.85rem);
+      padding-left: 0;
+      text-align: right;
     }
   }
 

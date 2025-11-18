@@ -57,21 +57,21 @@ education:
     date_start: 2019-10-01
     date_end: 2022-10-01
     summary: |
-      Dean's Award. Advisor: Prof. Takayuki Okatani. Research on multimodal perception and instruction-following.
+      Dean's Award. Advisor: Prof. Takayuki Okatani
   - area: Master in Information Sciences
     institution: Tohoku University
     icon: ''
     date_start: 2017-10-01
     date_end: 2019-10-01
     summary: |
-      GPA: 4.0/4.0. Thesis on applied computer vision and deep learning.
+      GPA: 4.0/4.0. Advisor: Prof. Takeshi Tokuyama
   - area: Bachelor in Computer Science
     institution: Vietnam National University, UET
     icon: ''
     date_start: 2012-10-01
     date_end: 2017-10-01
     summary: |
-      Highest GPA of cohort (3.9/4.0). Focus on machine learning and intelligent systems.
+      Highest GPA of cohort (3.9/4.0). Advisor: Assoc. Prof. Ha Quang Thuy
 
   # - area: Exchange Student – Fostering ASEAN Future Leaders
   #   institution: Daejeon University, South Korea
@@ -149,155 +149,160 @@ languages:
 awards:
   - title: Dean's Award for Excellent Achievements
     url: https://www.tohoku.ac.jp/en/
-    date: '2023-01-01'
+    date: '2023-03-01'
     awarder: Tohoku University
     icon: hero/academic-cap
     summary: |
-      Recognized for outstanding Ph.D. research in multimodal AI.
+      Recognized for outstanding Ph.D. research in multimodal AI
   - title: Best Presentation Award for Ph.D. Research
     url: https://www.tohoku.ac.jp/en/
-    date: '2022-01-01'
+    date: '2022-03-01'
     awarder: Tohoku University
     icon: hero/trophy
     summary: |
-      Awarded for top Ph.D. research presentation in Information Sciences.
-  - title: Japanese Government Scholarship (MEXT) for Ph.D. Course
-    url: https://www.studyinjapan.go.jp/en/
-    date: '2019-01-01'
-    awarder: MEXT, Japan
-    icon: hero/academic-cap
-    summary: |
-      Full scholarship for Ph.D. studies (2019-2022).
+      Awarded for top Ph.D. research presentation in Information Sciences
+
   - title: Winner of Alfred Challenge
     url: https://www.ecva.net/
     date: '2020-08-01'
     awarder: AllenAI & Google (ECCV 2020)
     icon: hero/star
     summary: |
-      First place for interactive instruction-following agent competition at ECCV 2020.
-  - title: Honda Young Engineer Scientist Award Plus Ph.D. Fellowship from Honda Foundation
+      First place for interactive instruction-following agent competition at ECCV 2020
+  - title: Honda YES Fellowship
     url: https://www.hondafoundation.jp/en/
-    date: '2019-01-01'
+    date: '2019-10-01'
     awarder: Honda, Japan
     icon: hero/academic-cap
     summary: |
-      Selected among top engineering students in Vietnam and Japan, with Ph.D. fellowship support.
-  - title: Japanese Government Scholarship (MEXT) for Master Course
+      Fellowship to Honda YES awardees who pursue studies in Japan
+
+  - title: Japanese Government Scholarship for Ph.D. Course
     url: https://www.studyinjapan.go.jp/en/
-    date: '2017-01-01'
+    date: '2019-10-01'
     awarder: MEXT, Japan
     icon: hero/academic-cap
     summary: |
-      Full scholarship for Master's studies (2017-2019).
+      Full scholarship for Ph.D. studies in 2019-2022
   - title: Data Science Summer School Scholarship
-    date: '2018-01-01'
+    date: '2018-08-01'
     awarder: Gottingen University
     icon: hero/academic-cap
     summary: |
-      Selected to attend Data Science Summer School at Gottingen University, Germany.
+      Selected to attend Data Science Summer School at Gottingen University, Germany
   - title: Honda Young Engineer Scientist Award
     url: https://www.hondafoundation.jp/en/
-    date: '2017-01-01'
+    date: '2017-12-01'
     awarder: Honda Foundation
     icon: hero/trophy
     summary: |
       For top 10 engineering students in Vietnam.
   - title: Third Prize of National Scientific Student Research Conference
-    date: '2017-01-01'
+    date: '2017-10-01'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
-      Recognized for outstanding research presentation at the national level.
+      Recognized for outstanding research presentation at the national level
+  - title: Japanese Government Scholarship for Master Course
+    url: https://www.studyinjapan.go.jp/en/
+    date: '2017-10-01'
+    awarder: MEXT, Japan
+    icon: hero/academic-cap
+    summary: |
+      Full scholarship for Master's studies in 2017-2019
+  
   - title: Excellent Thesis Award
-    date: '2017-01-01'
+    date: '2017-06-01'
     awarder: Vietnam National University (UET-VNU)
     icon: hero/academic-cap
     summary: |
-      Scored 10/10 for Bachelor's thesis.
+      Best Bachelor's thesis with highest score 10/10
   - title: First Prize of Scientific Student Research Conference
     date: '2017-01-01'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
-      First place award for research presentation at the national conference.
+      First place award for research presentation at the national conference
   - title: Excellent Student Award
     date: '2017-01-01'
     awarder: Vietnam National University (UET-VNU)
     icon: hero/academic-cap
     summary: |
-      Highest GPA among the K57 cohort.
+      Highest GPA among the K57 cohort
   - title: AmCham Scholarship
-    date: '2017-01-01'
+    date: '2017-05-01'
     awarder: American Chamber and the US Embassy
     icon: hero/academic-cap
     summary: |
-      Scholarship awarded by the American Chamber of Commerce and the US Embassy in Vietnam.
-  - title: Fostering ASEAN Future Leaders Program
-    date: '2015-01-01'
+      Scholarship awarded by the American Chamber of Commerce and the US Embassy in Vietnam
+  - title: Fostering ASEAN Future Leaders Scholarship
+    date: '2015-09-01'
     awarder: Korea
     icon: hero/academic-cap
     summary: |
-      Fully funded scholarship for One-year exchange program in South Korea (2015-2016).
+      Fully funded scholarship for one-year exchange program in South Korea in 2015-2016
   - title: Machine Learning Summer School Scholarship
-    date: '2015-01-01'
+    date: '2015-08-01'
     awarder: Kyoto University
     icon: hero/academic-cap
     summary: |
-      Selected to attend Machine Learning Summer School at Kyoto University, Japan.
+      Selected to attend Machine Learning Summer School at Kyoto University, Japan
   - title: Merit-based University Scholarships
     date: '2013-01-01'
     awarder: UET-VNU
     icon: hero/academic-cap
     summary: |
-      Received merit-based scholarships throughout undergraduate studies (2013-2017).
+      Received merit-based scholarships throughout undergraduate studies (2013-2017)
   - title: Shinnyo-en Scholarships
-    date: '2013-01-01'
+    date: '2012-11-01'
     awarder: Japan
     icon: hero/academic-cap
     summary: |
-      Awarded in 3 consecutive years (2013-2016) for academic excellence.
+      Awarded in 3 consecutive years (2013-2016) for academic excellence
   - title: Hoa Trang Nguyen Award
-    date: '2012-01-01'
+    date: '2012-10-01'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
-      Prestigious award recognizing outstanding academic achievement.
+      Prestigious award recognizing outstanding academic achievement
   - title: Second Highest Score in University Entrance Examination
     date: '2012-01-01'
     awarder: Vietnam
     icon: hero/academic-cap
     summary: |
-      Achieved the second highest score nationwide in the university entrance examination.
-  - title: First Prize of National Chemistry Olympiad
+      Achieved the second highest score in the UET entrance examination
+  - title: Merit-based New South Wales University Scholarship
+    date: '2012-06-01'
+    awarder: Australia
+    icon: hero/academic-cap
+    summary: |
+      Merit-based cholarship from University of New South Wales, Australia
+
+  - title: First Prize of Vietnam National Chemistry Olympiad
     date: '2012-01-01'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
-      First place in the National Chemistry Olympiad competition.
-  - title: Merit-based New South Wales University Scholarship
-    date: '2012-01-01'
-    awarder: Australia
-    icon: hero/academic-cap
-    summary: |
-      Scholarship offer from University of New South Wales, Australia.
+      First place in the National Chemistry Olympiad competition
+
   - title: Telecom Corporation Scholarship
     date: '2012-01-01'
     awarder: Vietnam
     icon: hero/academic-cap
     summary: |
-      Scholarship awarded by Vietnam Telecom Corporation for academic excellence.
+      Scholarship awarded by Vietnam Telecom Corporation for academic excellence
   - title: Odon Vallet Scholarship for Top High-School Students
-    date: '2011-01-01'
+    date: '2011-06-01'
     awarder: Odon Vallet, France
     icon: hero/academic-cap
     summary: |
-      Prestigious scholarship for top high-school students in Vietnam.
+      Prestigious scholarship for top high-school students in Vietnam
   - title: Third Prize of National Chemistry Olympiad
     date: '2011-01-01'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
-      Third place in the National Chemistry Olympiad competition.
+      Third place in the Vietnam National Chemistry Olympiad competition
 ---
 
 Quang Nguyen (full name: Van-Quang Nguyen) is a postdoctoral researcher at RIKEN AIP in the Multimodal Visual Intelligence Team, under the supervision of Prof. Takayuki Okatani. His recent work centers on Multimodal Large Language Models for vision–language understanding and its applications (e.g., on autonomous driving, environmental intelligence). He has published in leading venues such as ECCV, CVPR, IJCAI, FG, CACIE, and TIV, with over 750 citations, and he mentors graduate students on doing research and building AI systems. He is driven by a commitment to translate scientific advances into practical technologies that enhance sustainability, efficiency, and accessibility. Please reach out for potential collaboration.
