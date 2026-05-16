@@ -17,5 +17,8 @@
   },
   "engines": {
     "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "hugo-bin": "0.149.2"
   }
 }
