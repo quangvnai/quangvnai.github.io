@@ -19,6 +19,13 @@
     "node": ">=22.0.0"
   },
   "devDependencies": {
-    "hugo-bin": "0.149.2"
+    "hugo-extended": "0.152.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "hugo-extended",
+      "@parcel/watcher",
+      "@tailwindcss/oxide"
+    ]
   }
 }
