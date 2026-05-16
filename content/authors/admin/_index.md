@@ -23,10 +23,12 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Postdoc Researcher, RIKEN AIP
+role: Visiting Researcher, Tohoku University
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
+  - name: Tohoku University
+    url: https://www.tohoku.ac.jp/en/
   - name: RIKEN Center for Advanced Intelligence Project
     url: https://www.riken.jp/en/research/labs/aip/
 
@@ -48,7 +50,7 @@ interests:
   - Large Language Models
   - Agentic Multimodal Large Language Models
   - Vision-language understanding
-  - MLLMs applications (autonomous driving, environmental intelligence, etc)
+  - MLLMs applications (safety and environment, etc)
 
 education:
   - area: Ph.D. in Information Sciences
@@ -305,4 +307,4 @@ awards:
       Third place in the Vietnam National Chemistry Olympiad competition
 ---
 
-Quang Nguyen (full name: Van-Quang Nguyen) is a postdoctoral researcher at RIKEN AIP in the Multimodal Visual Intelligence Team, under the supervision of Prof. Takayuki Okatani. His recent work centers on Multimodal Large Language Models for vision–language understanding and its applications (e.g., on autonomous driving, environmental intelligence). He has published in leading venues such as ECCV, CVPR, EACL, IJCAI, FG, CACIE, and TIV, with 900+ citations, and he mentors graduate students on doing research and building AI systems. He is driven by a commitment to translate scientific advances into practical technologies that enhance sustainability, efficiency, and accessibility. Please reach out for potential collaboration.
+Quang Nguyen (full name: Van-Quang Nguyen) is currently a visiting researcher in Computer Vision Lab, Tohoku University. He has been a postdoctoral researcher at RIKEN AIP in the Multimodal Visual Intelligence Team, under the supervision of Prof. Takayuki Okatani for three years. His recent work centers on Multimodal Large Language Models for vision–language understanding and its applications (e.g., on safety and environment). He has published in leading venues such as ECCV, CVPR, EACL, IJCAI, FG, CACIE, and TIV, with 900+ citations, and he mentors graduate students on doing research and building AI systems. He is driven by a commitment to translate scientific advances into practical technologies that enhance sustainability, efficiency, and accessibility. Check his [Google Scholar](https://scholar.google.com/citations?user=qR180McAAAAJ) to view all the list of his publications. Please reach out for potential collaboration.

@@ -17,6 +17,9 @@ main:
   - name: Publications
     url: /#publications
     weight: 13
+  - name: CV
+    url: /uploads/CV_April26.pdf
+    weight: 14
   # - name: Talks
   #   url: /#talks
   #   weight: 13
