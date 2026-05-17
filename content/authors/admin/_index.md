@@ -23,14 +23,16 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Visiting Researcher, Tohoku University
+role: ''
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Tohoku University
-    url: https://www.tohoku.ac.jp/en/
-  - name: RIKEN Center for Advanced Intelligence Project
-    url: https://www.riken.jp/en/research/labs/aip/
+  - position: Visiting Researcher
+    name: Tohoku University
+    url: 'https://www.vision.is.tohoku.ac.jp/?page_id=338&lang=en'
+  - position: Postdoctoral Researcher
+    name: RIKEN Center for Advanced Intelligence Project
+    url: 'https://www.vision.is.tohoku.ac.jp/?page_id=338&lang=en'
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
