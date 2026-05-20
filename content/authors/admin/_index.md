@@ -38,10 +38,10 @@ organizations:
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:quang.nguyen.jz@riken.jp'
-    label: quang.nguyen.jz@riken.jp
+    url: 'mailto:quang@vision.is.tohoku.ac.jp'
+    label: quang@vision.is.tohoku.ac.jp
   - icon: custom/gmail
-    url: 'mailto:quangvnai21@gmail.com'
+    url: 'mailto:quanguet@gmail.com'
     label: Personal email
   - icon: academicons/google-scholar
     url: https://scholar.google.com/citations?user=qR180McAAAAJ
@@ -309,4 +309,8 @@ awards:
       Third place in the Vietnam National Chemistry Olympiad competition
 ---
 
-Quang Nguyen (full name: Van-Quang Nguyen) is currently a visiting researcher in Computer Vision Lab, Tohoku University. He has been a postdoctoral researcher at RIKEN AIP in the Multimodal Visual Intelligence Team, under the supervision of Prof. Takayuki Okatani for three years. His recent work centers on Multimodal Large Language Models for vision–language understanding and its applications (e.g., on safety and environment). He has published in leading venues such as ECCV, CVPR, EACL, IJCAI, FG, CACIE, and TIV, with 900+ citations, and he mentors graduate students on doing research and building AI systems. He is driven by a commitment to translate scientific advances into practical technologies that enhance sustainability, efficiency, and accessibility. Check his [Google Scholar](https://scholar.google.com/citations?user=qR180McAAAAJ) to view all the list of his publications. Please reach out for potential collaboration.
+Quang Nguyen is an AI and Machine Learning researcher focused on vision-language understanding, Multimodal Large Language Models, and their AI applications. He is currently a Visiting Researcher at Tohoku University, following a 3-year postdoctoral fellowship at RIKEN AIP under Prof. Takayuki Okatani.
+
+He has published over a dozen papers in premier venues like CVPR, ECCV, EACL, and IJCAI (900+ citations) and frequently mentors graduate students in building AI systems. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
+
+Feel free to reach out for collaborations or view his latest work on [Google Scholar](https://scholar.google.com/citations?user=qR180McAAAAJ).
