@@ -309,7 +309,7 @@ awards:
       Third place in the Vietnam National Chemistry Olympiad competition
 ---
 
-Quang Nguyen is an AI and Machine Learning researcher focused on vision-language understanding, Multimodal Large Language Models, and their AI applications. He is currently a Visiting Researcher at Tohoku University, following a 3-year postdoctoral fellowship at RIKEN AIP under Prof. Takayuki Okatani.
+Quang Nguyen is an AI researcher focused on vision-language understanding, Multimodal Large Language Models, and their AI applications. He is currently a Visiting Researcher at Tohoku University, following a 3-year postdoctoral fellowship at RIKEN AIP under Prof. Takayuki Okatani.
 
 He has published over a dozen papers in premier venues like CVPR, ECCV, EACL, and IJCAI (900+ citations) and frequently mentors graduate students in building AI systems. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
 
