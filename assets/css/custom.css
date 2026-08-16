@@ -371,7 +371,7 @@
   border-radius: 0.6rem;
   overflow: hidden;
   background: rgb(255 255 255);
-  border: 3px solid rgb(var(--hb-primary-100-rgb));
+  border: 1.5px solid rgb(var(--hb-primary-100-rgb));
 }
 
 .dark .qn-pub-teaser {
