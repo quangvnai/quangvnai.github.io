@@ -67,21 +67,21 @@ education:
     date_start: 2019-10-01
     date_end: 2022-10-01
     summary: |
-      Dean's Award. Advisor: Prof. Takayuki Okatani
+      GPA: 4.0/4.0. Dean's Award. Advisor: Prof. Takayuki Okatani
   - area: Master in Information Sciences
     institution: Tohoku University
     icon: ''
     date_start: 2017-10-01
     date_end: 2019-10-01
     summary: |
-      GPA: 4.0/4.0. Advisor: Prof. Takeshi Tokuyama and Assoc. Prof. Jinhee Chun
+      GPA: 3.9/4.0. Advisor: Prof. Takeshi Tokuyama and Assoc. Prof. Jinhee Chun
   - area: Bachelor in Computer Science
     institution: Vietnam National University, UET
     icon: ''
     date_start: 2012-10-01
     date_end: 2017-10-01
     summary: |
-      Highest GPA of cohort (3.9/4.0). Advisor: Assoc. Prof. Ha Quang Thuy
+      GPA: 3.9/4.0, highest of cohort. Advisor: Assoc. Prof. Ha Quang Thuy
 
   - area: Fostering ASEAN Future Leaders
     institution: Daejeon University, South Korea
@@ -89,7 +89,7 @@ education:
     date_start: 2015-09-01
     date_end: 2016-08-31
     summary: |
-      Fully funded one-year exchange program for 20 ASEAN students
+      GPA: 4.4/4.5. Fully funded one-year exchange program for 20 ASEAN students
 
 
 work:
