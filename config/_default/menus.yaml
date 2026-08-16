@@ -1,17 +1,21 @@
 # Navigation
-#   Four destinations, no duplicates. `Vitae` (/#experience) and `Experience`
-#   (/experience/) previously pointed at the same content.
+#   Single-page site: every item is an anchor into a section of the homepage.
+#   The hashes must match the section `id`s in content/_index.md.
+#   `#top` is the id Hugo Blox puts on <body>.
 
 main:
   - name: About
-    url: /
+    url: '/#top'
     weight: 10
   - name: Publications
-    url: /publications/
+    url: '/#publications'
     weight: 20
   - name: Experience
-    url: /experience/
+    url: '/#experience'
     weight: 30
-  - name: CV
-    url: /uploads/CV_April26.pdf
+  - name: Education
+    url: '/#education'
     weight: 40
+  - name: Awards
+    url: '/#honours'
+    weight: 50

@@ -138,6 +138,24 @@
   color: rgb(156 163 175);
 }
 
+.qn-section-lead a {
+  color: rgb(var(--hb-primary-700-rgb));
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.qn-section-lead a:hover {
+  color: rgb(var(--hb-primary-800-rgb));
+}
+
+.dark .qn-section-lead a {
+  color: rgb(var(--hb-primary-300-rgb));
+}
+
+.dark .qn-section-lead a:hover {
+  color: rgb(var(--hb-primary-200-rgb));
+}
+
 .qn-container {
   max-width: var(--qn-wide);
   margin: 0 auto;
@@ -147,8 +165,16 @@
 /* --------------------------------------------------------------------------
    3. Hero
    The hero background is the theme's own `.hbx-bg-gradient` (applied via
-   `css_class` on the block) and is deliberately left untouched.
+   `css_class` on the block). Its colours are left untouched; the only change
+   is a mask that fades the whole gradient out over the last third of the
+   section, so it dissolves into the page background instead of ending on a
+   hard horizontal seam above Selected publications.
    -------------------------------------------------------------------------- */
+
+.hbx-bg-gradient::before {
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0 0 0) 55%, rgb(0 0 0 / 0) 100%);
+  mask-image: linear-gradient(to bottom, rgb(0 0 0) 55%, rgb(0 0 0 / 0) 100%);
+}
 
 /* Portrait: thick white ring, so the photo reads as a cameo against the
    hero gradient. */
@@ -188,19 +214,72 @@
   flex: none;
 }
 
-/* Hero calls to action: equal-width, centred stack. */
-.qn-hero-cta {
+/* Hero link row: profile icons and the CV button share one line. */
+.qn-hero-links {
   margin-top: 1.5rem;
   display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 0.625rem;
-  width: 100%;
-  max-width: 15rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
-.qn-hero-cta .qn-btn {
+.qn-hero-link {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
+  gap: 0.35rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(229 231 235);
+  background: rgb(255 255 255);
+  color: rgb(75 85 99);
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.qn-hero-link:hover {
+  border-color: rgb(var(--hb-primary-400-rgb));
+  color: rgb(var(--hb-primary-700-rgb));
+}
+
+.dark .qn-hero-link {
+  border-color: rgb(55 62 74);
+  background: rgb(31 41 55);
+  color: rgb(209 213 219);
+}
+
+.dark .qn-hero-link:hover {
+  border-color: rgb(var(--hb-primary-500-rgb));
+  color: rgb(var(--hb-primary-300-rgb));
+}
+
+/* Text variant (CV): same height, width grows to fit the label. */
+.qn-hero-link-text {
+  width: auto;
+  padding: 0 0.85rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Inert variant: present but not actionable (no target configured). */
+.qn-hero-link-inert {
+  cursor: default;
+  color: rgb(156 163 175);
+  border-color: rgb(235 237 240);
+  background: rgb(250 250 251);
+}
+
+.qn-hero-link-inert:hover {
+  border-color: rgb(235 237 240);
+  color: rgb(156 163 175);
+}
+
+.dark .qn-hero-link-inert,
+.dark .qn-hero-link-inert:hover {
+  color: rgb(107 114 128);
+  border-color: rgb(45 51 62);
+  background: rgb(28 33 42);
 }
 
 .qn-btn-primary {
@@ -291,8 +370,8 @@
   aspect-ratio: 16 / 10;
   border-radius: 0.6rem;
   overflow: hidden;
-  background: rgb(var(--hb-primary-50-rgb));
-  border: 1px solid rgb(var(--hb-primary-100-rgb));
+  background: rgb(255 255 255);
+  border: 3px solid rgb(var(--hb-primary-100-rgb));
 }
 
 .dark .qn-pub-teaser {
@@ -300,11 +379,30 @@
   border-color: rgb(45 51 62);
 }
 
+.qn-pub-teaser a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .qn-pub-teaser img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   display: block;
+}
+
+/* Near-16:10 figures fill the card; far-off ones keep their whole frame. */
+.qn-teaser-fill {
+  object-fit: cover;
+}
+
+.qn-teaser-fit {
+  object-fit: contain;
+}
+
+/* The placeholder still fills its box edge to edge. */
+.qn-pub-teaser-placeholder {
+  background-color: rgb(var(--hb-primary-50-rgb));
 }
 
 /* Placeholder shown until a real figure is dropped into the paper's folder:
@@ -657,6 +755,49 @@ a.qn-award-title:hover {
   color: rgb(148 163 184);
 }
 
+/* Disclosure for the remaining honours — native <details>, no JavaScript. */
+.qn-awards-more {
+  margin-top: 1.25rem;
+}
+
+.qn-awards-toggle {
+  cursor: pointer;
+  list-style: none;
+  width: fit-content;
+}
+
+.qn-awards-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.qn-awards-chevron {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.qn-awards-more[open] .qn-awards-chevron {
+  transform: rotate(180deg);
+}
+
+.qn-awards-toggle-less,
+.qn-awards-more[open] .qn-awards-toggle-more {
+  display: none;
+}
+
+.qn-awards-more[open] .qn-awards-toggle-less {
+  display: inline;
+}
+
+.qn-awards-rest {
+  margin-top: 0.5rem;
+  border-top: 1px solid rgb(243 244 246);
+}
+
+.dark .qn-awards-rest {
+  border-top-color: rgb(39 44 54);
+}
+
 /* --------------------------------------------------------------------------
    8. Resume timeline (experience / education blocks)
    The stock block caps itself at `max-w-prose` and centres its headings.
@@ -728,6 +869,22 @@ a.qn-award-title:hover {
 html,
 body {
   overflow-x: clip;
+}
+
+/* Single-page anchor navigation: scroll smoothly, and stop sections landing
+   underneath the sticky navbar. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.hbb-section {
+  scroll-margin-top: 5rem;
 }
 
 /* Navbar wordmark picks up the display face. */

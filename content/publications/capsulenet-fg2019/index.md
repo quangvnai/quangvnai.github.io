@@ -9,6 +9,6 @@ publication_types: ['paper-conference']
 publication: 'IEEE International Conference on Automatic Face & Gesture Recognition (FG) 2019'
 venue: 'FG 2019'
 summary: 'Applies capsule networks to the challenging task of recognizing subtle micro-expressions.'
-featured: false
+featured: true
 ---
 

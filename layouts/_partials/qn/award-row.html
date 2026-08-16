@@ -1,0 +1,27 @@
+{{/* One honour row.
+     Input: dict { "award" map, "format" string } */}}
+{{ $a := .award }}
+{{ $fmt := .format | default "January 2006" }}
+<div class="qn-award">
+  <div class="qn-award-icon">
+    {{ partial "functions/get_icon" (dict
+      "name" ($a.icon | default "hero/trophy")
+      "attributes" "class=\"w-full h-full\" aria-hidden=\"true\"") }}
+  </div>
+
+  <div class="qn-award-head">
+    {{ if $a.url }}
+      <a href="{{ $a.url }}" target="_blank" rel="noopener" class="qn-award-title">{{ $a.title | markdownify | emojify }}</a>
+    {{ else }}
+      <span class="qn-award-title">{{ $a.title | markdownify | emojify }}</span>
+    {{ end }}
+    <span class="qn-award-meta">
+      {{ with $a.awarder }}{{ . }}{{ end }}
+      {{ with $a.date }} · {{ (time .) | time.Format $fmt }}{{ end }}
+    </span>
+  </div>
+
+  {{ with $a.summary }}
+    <div class="qn-award-summary">{{ . | markdownify | emojify }}</div>
+  {{ end }}
+</div>

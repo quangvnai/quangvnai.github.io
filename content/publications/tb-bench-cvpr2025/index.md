@@ -14,7 +14,7 @@ publication: 'CVPR 2025 Workshop on Autonomous Driving'
 venue: 'CVPR 2025'
 venue_note: 'Workshop'
 summary: 'Introduces TB-Bench to train and evaluate multimodal agents for understanding complex traffic behaviors captured by dashcams.'
-featured: true
+featured: false
 
 # Teaser figure: drop an image named `featured.png` (or .jpg / .webp) beside
 # this file to replace the placeholder card on the homepage.

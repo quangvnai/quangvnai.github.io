@@ -3,6 +3,13 @@ title: 'Experience'
 date: 2023-10-24
 type: landing
 
+# Superseded by the Experience, Education and Honours sections on the homepage.
+# Kept (unrendered) so the file can be revived if a standalone CV page is ever
+# wanted again — delete it otherwise.
+build:
+  render: never
+  list: never
+
 design:
   spacing: '0rem'
 
@@ -12,11 +19,7 @@ sections:
     content:
       username: admin
     design:
-      # Years only
       date_format: '2006'
-      is_education_first: false
-      spacing:
-        padding: ['3rem', 0, 0, 0]
 
   - block: resume-skills
     id: skills
@@ -25,18 +28,12 @@ sections:
       username: admin
     design:
       show_skill_percentage: false
-      spacing:
-        padding: ['4rem', 0, 0, 0]
 
-  # Full honours record. The homepage links here and shows only a shortlist.
   - block: resume-awards
     id: honours
     content:
       title: Awards, scholarships & honours
       username: admin
-      count: 0
     design:
       date_format: 'January 2006'
-      spacing:
-        padding: ['4rem', 0, '4rem', 0]
 ---

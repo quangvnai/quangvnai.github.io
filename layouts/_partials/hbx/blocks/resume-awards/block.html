@@ -3,8 +3,11 @@
      The stock block renders every award as a full-bleed card, which turned 24
      honours into roughly ten mobile screens. This renders one row per honour,
      all text left-aligned (the stock right-aligned summary was the hardest
-     part of the page to read), and supports `count` so the homepage can show a
-     shortlist while the CV page shows everything.
+     part of the page to read).
+
+     Honours marked `selected: true` in the author front matter show by
+     default; the rest sit behind a native <details> disclosure, so the full
+     record expands in place with no JavaScript and no second page.
 */}}
 
 {{ $page := .wcPage }}
@@ -16,10 +19,18 @@
   {{ errorf "Could not find an author page for `%s`." $author }}
 {{ end }}
 
-{{ $awards := $person_page.Params.awards }}
-{{ $awards = sort $awards "date" "desc" }}
+{{ $awards := sort $person_page.Params.awards "date" "desc" }}
 {{ $total := len $awards }}
-{{ with $block.content.count }}{{ if gt . 0 }}{{ $awards = first . $awards }}{{ end }}{{ end }}
+
+{{/* Partition on the `selected` flag. If nothing is flagged, fall back to
+     `count` so the block still behaves sensibly. */}}
+{{ $selected := where $awards "selected" true }}
+{{ $rest := where $awards "selected" "!=" true }}
+{{ if not $selected }}
+  {{ $n := $block.content.count | default 6 }}
+  {{ $selected = first $n $awards }}
+  {{ $rest = after $n $awards }}
+{{ end }}
 
 {{ partial "qn/section-head" (dict
   "title" $block.content.title
@@ -27,38 +38,22 @@
   "page" $page) }}
 
 <div class="qn-awards">
-  {{ range $awards }}
-    <div class="qn-award">
-      <div class="qn-award-icon">
-        {{ partial "functions/get_icon" (dict
-          "name" (.icon | default "hero/trophy")
-          "attributes" "class=\"w-full h-full\" aria-hidden=\"true\"") }}
-      </div>
+  {{ range $selected }}
+    {{ partial "qn/award-row" (dict "award" . "format" $block.design.date_format) }}
+  {{ end }}
 
-      <div class="qn-award-head">
-        {{ if .url }}
-          <a href="{{ .url }}" target="_blank" rel="noopener" class="qn-award-title">{{ .title | markdownify | emojify }}</a>
-        {{ else }}
-          <span class="qn-award-title">{{ .title | markdownify | emojify }}</span>
+  {{ with $rest }}
+    <details class="qn-awards-more">
+      <summary class="qn-btn qn-btn-ghost qn-awards-toggle">
+        <span class="qn-awards-toggle-more">Show all awards and scholarships ({{ $total }} total)</span>
+        <span class="qn-awards-toggle-less">Show fewer</span>
+        {{ partial "functions/get_icon" (dict "name" "hero/chevron-down" "attributes" "class=\"qn-awards-chevron\" aria-hidden=\"true\"") }}
+      </summary>
+      <div class="qn-awards-rest">
+        {{ range . }}
+          {{ partial "qn/award-row" (dict "award" . "format" $block.design.date_format) }}
         {{ end }}
-        <span class="qn-award-meta">
-          {{ with .awarder }}{{ . }}{{ end }}
-          {{ with .date }} · {{ (time .) | time.Format ($block.design.date_format | default "January 2006") }}{{ end }}
-        </span>
       </div>
-
-      {{ with .summary }}
-        <div class="qn-award-summary">{{ . | markdownify | emojify }}</div>
-      {{ end }}
-    </div>
+    </details>
   {{ end }}
 </div>
-
-{{ with $block.content.button }}
-  <div class="qn-container mt-6">
-    <a href="{{ .url | relLangURL }}" class="qn-btn qn-btn-ghost">
-      {{ .text }} ({{ $total }} total)
-      {{ partial "functions/get_icon" (dict "name" "hero/arrow-right" "attributes" "aria-hidden=\"true\"") }}
-    </a>
-  </div>
-{{ end }}

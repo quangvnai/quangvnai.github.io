@@ -38,9 +38,18 @@
     <article class="qn-pub">
       <div class="qn-pub-teaser">
         {{ if $teaser }}
-          {{ $img := $teaser.Fill "640x400 Center webp q85" }}
+          {{/* Cards are 16:10. A teaser exported at (or near) that ratio is
+               filled edge to edge, losing only a percent or two. A figure
+               whose ratio is more than 10% away — a wide pipeline diagram,
+               say — would lose content worth keeping, so it is fitted and
+               letterboxed instead of silently cropped. */}}
+          {{ $ratio := div (float $teaser.Width) (float $teaser.Height) }}
+          {{ $off := math.Abs (sub (div $ratio 1.6) 1.0) }}
+          {{ $fill := lt $off 0.10 }}
+          {{ $img := cond $fill ($teaser.Fill "800x500 Center webp q85") ($teaser.Fit "800x800 webp q85") }}
           <a href="{{ $item.RelPermalink }}" tabindex="-1" aria-hidden="true">
-            <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+            <img class="{{ if $fill }}qn-teaser-fill{{ else }}qn-teaser-fit{{ end }}"
+                 src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
                  loading="lazy" decoding="async" alt="">
           </a>
         {{ else }}

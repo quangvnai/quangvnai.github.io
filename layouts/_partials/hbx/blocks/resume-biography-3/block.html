@@ -86,26 +86,12 @@
           <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{{ . | markdownify }}</p>
         {{ end }}
 
-        {{/* Calls to action: the two things a visitor actually came for. */}}
-        {{ with $block.content.buttons }}
-          <div class="qn-hero-cta">
-            {{ range . }}
-              {{ $ext := path.Ext .url }}
-              <a href="{{ .url | relLangURL }}"
-                 {{ if or (hasPrefix .url "http") (eq $ext ".pdf") }}target="_blank" rel="noopener"{{ end }}
-                 class="qn-btn {{ if .primary }}qn-btn-primary{{ else }}qn-btn-ghost{{ end }}">
-                {{ with .icon }}{{ partial "functions/get_icon" (dict "name" . "attributes" "aria-hidden=\"true\"") }}{{ end }}
-                {{ .text }}
-              </a>
-            {{ end }}
-          </div>
-        {{ end }}
-
-        {{/* Contact / profile links. aria-label falls back to the icon name
-             only when no human label is given. */}}
-        {{ with $person.profiles }}
-          <div class="mt-6 flex flex-wrap justify-center gap-2">
-            {{ range . }}
+        {{/* One row of small buttons: profile links, then any text buttons
+             (the CV). aria-label falls back to the icon name only when no
+             human label is given. */}}
+        {{ if or $person.profiles $block.content.buttons }}
+          <div class="qn-hero-links">
+            {{ range $person.profiles }}
               {{ $link := .url | default .link }}
               {{ $scheme := (urls.Parse $link).Scheme }}
               {{ $external := in (slice "http" "https") $scheme }}
@@ -114,12 +100,31 @@
                  {{ if $external }}target="_blank" rel="noopener"{{ end }}
                  aria-label="{{ $label }}"
                  title="{{ $label }}"
-                 class="w-10 h-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700
-                        bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300
-                        hover:border-primary-400 hover:text-primary-700
-                        dark:hover:border-primary-500 dark:hover:text-primary-300 transition-colors">
+                 class="qn-hero-link">
                 {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-5 h-5\" aria-hidden=\"true\"") }}
               </a>
+            {{ end }}
+
+            {{ range $block.content.buttons }}
+              {{ if .url }}
+                {{ $ext := path.Ext .url }}
+                <a href="{{ .url | relLangURL }}"
+                   {{ if or (hasPrefix .url "http") (eq $ext ".pdf") }}target="_blank" rel="noopener"{{ end }}
+                   {{ with .label }}aria-label="{{ . }}" title="{{ . }}"{{ end }}
+                   class="qn-hero-link qn-hero-link-text">
+                  {{ with .icon }}{{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"w-4 h-4\" aria-hidden=\"true\"") }}{{ end }}
+                  {{ .text }}
+                </a>
+              {{ else }}
+                {{/* No `url`: render an inert button rather than a dead link,
+                     so it cannot be clicked, focused or followed. */}}
+                <span {{ with .label }}title="{{ . }}" aria-label="{{ . }}"{{ end }}
+                      aria-disabled="true"
+                      class="qn-hero-link qn-hero-link-text qn-hero-link-inert">
+                  {{ with .icon }}{{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"w-4 h-4\" aria-hidden=\"true\"") }}{{ end }}
+                  {{ .text }}
+                </span>
+              {{ end }}
             {{ end }}
           </div>
         {{ end }}
@@ -137,23 +142,7 @@
           </div>
         {{ end }}
 
-        {{ with $person.education }}
-          <div class="mt-10">
-            <h2 class="qn-display text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              {{ $block.content.headings.education | default (i18n "education") | markdownify }}
-            </h2>
-            <ul class="space-y-3 border-l border-gray-200 dark:border-gray-700 pl-5">
-              {{ range . }}
-                <li>
-                  <p class="font-semibold text-gray-900 dark:text-white leading-snug">{{ .area }}</p>
-                  <p class="text-sm text-gray-600 dark:text-gray-400">
-                    {{ .institution }}{{ with .date_end }} · {{ (time .) | time.Format "2006" }}{{ end }}
-                  </p>
-                </li>
-              {{ end }}
-            </ul>
-          </div>
-        {{ end }}
+        {{/* Education has its own anchored section further down the page. */}}
 
         {{ with $person.interests }}
           <div class="mt-10">

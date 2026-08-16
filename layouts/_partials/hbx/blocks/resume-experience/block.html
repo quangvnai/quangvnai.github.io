@@ -15,6 +15,8 @@
 {{end}}
 {{ $person := $person_page.Params }}
 {{ $is_education_first := $block.design.is_education_first | default false }}
+{{/* `show`: "work" | "education" | "both" (default) */}}
+{{ $show := $block.content.show | default "both" }}
 
 <div class="flex flex-col items-center mx-auto w-full max-w-prose justify-center">
 <!--  <article class="prose prose-slate lg:prose-xl dark:prose-invert">-->
@@ -26,7 +28,7 @@
 <!-- Need Gap >= 3 when flex-row due to negative margin on cols (-start-3) -->
 <div class="flex flex-col lg:gap-x-6 w-full px-6 sm:px-0 {{ if $is_education_first }}flex-col-reverse{{end}}">
 
-{{ if $person.work }}
+{{ if and $person.work (ne $show "education") }}
 <div class="w-full">
   <h2 class="qn-block-title text-gray-900 dark:text-white">{{ i18n "experience" | default "Experience" }}</h2>
   <ol class="relative w-full border-s border-gray-200 dark:border-gray-700">
@@ -65,7 +67,7 @@
 </div>
 {{ end }}
 
-{{ if $person.education }}
+{{ if and $person.education (ne $show "work") }}
 <div class="w-full">
   <h2 class="qn-block-title text-gray-900 dark:text-white">{{ i18n "education" }}</h2>
     <ol class="relative w-full border-s border-gray-200 dark:border-gray-700">
