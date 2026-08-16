@@ -1,0 +1,64 @@
+{{/* Hugo Blox: Awards — site override
+
+     The stock block renders every award as a full-bleed card, which turned 24
+     honours into roughly ten mobile screens. This renders one row per honour,
+     all text left-aligned (the stock right-aligned summary was the hardest
+     part of the page to read), and supports `count` so the homepage can show a
+     shortlist while the CV page shows everything.
+*/}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $author := $block.content.username | default "admin" }}
+
+{{ $person_page := site.GetPage (printf "/authors/%s" $author) }}
+{{ if not $person_page }}
+  {{ errorf "Could not find an author page for `%s`." $author }}
+{{ end }}
+
+{{ $awards := $person_page.Params.awards }}
+{{ $awards = sort $awards "date" "desc" }}
+{{ $total := len $awards }}
+{{ with $block.content.count }}{{ if gt . 0 }}{{ $awards = first . $awards }}{{ end }}{{ end }}
+
+{{ partial "qn/section-head" (dict
+  "title" $block.content.title
+  "lead" $block.content.text
+  "page" $page) }}
+
+<div class="qn-awards">
+  {{ range $awards }}
+    <div class="qn-award">
+      <div class="qn-award-icon">
+        {{ partial "functions/get_icon" (dict
+          "name" (.icon | default "hero/trophy")
+          "attributes" "class=\"w-full h-full\" aria-hidden=\"true\"") }}
+      </div>
+
+      <div class="qn-award-head">
+        {{ if .url }}
+          <a href="{{ .url }}" target="_blank" rel="noopener" class="qn-award-title">{{ .title | markdownify | emojify }}</a>
+        {{ else }}
+          <span class="qn-award-title">{{ .title | markdownify | emojify }}</span>
+        {{ end }}
+        <span class="qn-award-meta">
+          {{ with .awarder }}{{ . }}{{ end }}
+          {{ with .date }} · {{ (time .) | time.Format ($block.design.date_format | default "January 2006") }}{{ end }}
+        </span>
+      </div>
+
+      {{ with .summary }}
+        <div class="qn-award-summary">{{ . | markdownify | emojify }}</div>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
+
+{{ with $block.content.button }}
+  <div class="qn-container mt-6">
+    <a href="{{ .url | relLangURL }}" class="qn-btn qn-btn-ghost">
+      {{ .text }} ({{ $total }} total)
+      {{ partial "functions/get_icon" (dict "name" "hero/arrow-right" "attributes" "aria-hidden=\"true\"") }}
+    </a>
+  </div>
+{{ end }}

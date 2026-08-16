@@ -1,0 +1,30 @@
+/* Hugo Blox color theme: INK
+   Primary: a deep, desaturated ink blue — reads as printed academic navy
+   rather than the stock SaaS indigo.
+   Secondary: warm ember — used sparingly for venue badges and honours. */
+:root {
+  /* Ink Primary Palette */
+  --hb-primary-50-rgb: 240 244 250;
+  --hb-primary-100-rgb: 223 231 243;
+  --hb-primary-200-rgb: 191 206 230;
+  --hb-primary-300-rgb: 145 170 208;
+  --hb-primary-400-rgb: 98 128 179;
+  --hb-primary-500-rgb: 62 93 149;
+  --hb-primary-600-rgb: 42 71 122;
+  --hb-primary-700-rgb: 32 56 99;
+  --hb-primary-800-rgb: 25 44 78;
+  --hb-primary-900-rgb: 19 34 60;
+  --hb-primary-950-rgb: 12 21 38;
+  /* Ember Secondary Palette */
+  --hb-secondary-50-rgb: 253 246 238;
+  --hb-secondary-100-rgb: 250 234 214;
+  --hb-secondary-200-rgb: 244 211 170;
+  --hb-secondary-300-rgb: 234 180 121;
+  --hb-secondary-400-rgb: 222 145 76;
+  --hb-secondary-500-rgb: 202 116 45;
+  --hb-secondary-600-rgb: 172 91 32;
+  --hb-secondary-700-rgb: 138 70 27;
+  --hb-secondary-800-rgb: 110 57 26;
+  --hb-secondary-900-rgb: 89 47 23;
+  --hb-secondary-950-rgb: 48 24 11;
+}

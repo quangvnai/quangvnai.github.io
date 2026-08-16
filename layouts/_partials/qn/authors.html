@@ -1,0 +1,20 @@
+{{/* Render a publication's author list as plain text, marking the site owner.
+
+     Author entries are either the owner's author-page folder name (`admin`) or
+     a literal co-author name. Note that the `authors` taxonomy creates a term
+     page for *every* name, so a bare site.GetPage lookup matches all of them —
+     the owner is identified by the `superuser` flag instead.
+
+     Input: the publication Page. */}}
+{{ $item := . }}
+{{- range $i, $entry := $item.Params.authors -}}
+  {{- if gt $i 0 }}, {{ end -}}
+  {{- $author_page := site.GetPage (printf "/authors/%s" (urlize $entry)) -}}
+  {{- if and $author_page $author_page.Params.superuser -}}
+    {{/* Prefer the name the papers are published under, so citations keep
+         matching Scholar/DBLP even though the site displays a shorter name. */}}
+    <span class="qn-me">{{ $author_page.Params.publication_name | default $author_page.Title }}</span>
+  {{- else -}}
+    {{ $entry }}
+  {{- end -}}
+{{- end -}}

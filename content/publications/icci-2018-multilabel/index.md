@@ -10,6 +10,7 @@ authors:
 date: '2018-09-01'
 publication_types: ['paper-conference']
 publication: 'International Conference on Computational Collective Intelligence (ICCI) 2018'
+venue: 'ICCCI 2018'
 summary: 'Proposes a semi-supervised multi-label learning framework that explicitly models label-feature relationships.'
 featured: false
 ---

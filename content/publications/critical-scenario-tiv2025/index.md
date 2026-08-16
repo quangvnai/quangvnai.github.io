@@ -7,6 +7,8 @@ authors:
 date: '2025-01-01'
 publication_types: ['manuscript']
 publication: 'In submission to IEEE Transactions on Intelligent Vehicles (TIV) 2025'
+venue: 'Preprint'
+venue_note: 'Under review'
 summary: 'Manuscript detailing multimodal planning and reasoning for predicting critical driving scenarios.'
 featured: false
 ---

@@ -1,0 +1,34 @@
+{{/* Compact per-paper link row (PDF / preprint / code / project / …).
+     Uses the theme's normalized link builder so `url_pdf`, `url_code`,
+     `links:` entries and `hugoblox.ids.arxiv` all resolve the same way.
+     Input: the publication Page. */}}
+{{ $item := . }}
+{{ $links := partial "functions/build_links" (dict "page" $item "is_list" 1) }}
+{{ $fallback := dict "btn_pdf" "PDF" "btn_preprint" "arXiv" "btn_doi" "DOI" "btn_code" "Code"
+  "btn_dataset" "Data" "btn_model" "Model" "btn_slides" "Slides" "btn_video" "Video"
+  "btn_poster" "Poster" "btn_project" "Project" "btn_site" "Site" "btn_source" "Source"
+  "btn_demo" "Demo" "btn_cite" "Cite" }}
+{{ if $links }}
+  <div class="qn-pub-links">
+    {{ range $links }}
+      {{ if in .contexts "list" }}
+        {{ $url := .url }}
+        {{ $scheme := (urls.Parse $url).Scheme }}
+        {{ $external := in (slice "http" "https") $scheme }}
+        {{ if not $scheme }}
+          {{ with ($item.Resources.GetMatch $url) }}{{ $url = .RelPermalink }}{{ else }}{{ $url = $url | relURL }}{{ end }}
+        {{ end }}
+        {{ $label := .label }}
+        {{ if not $label }}
+          {{ $i18n := i18n .labelKey }}
+          {{ $label = cond (or (not $i18n) (eq $i18n .labelKey)) (index $fallback .labelKey | default (humanize .type)) $i18n }}
+        {{ end }}
+        <a href="{{ $url | safeURL }}" class="qn-link"
+           {{ if $external }}target="_blank" rel="noopener"{{ end }}>
+          {{ partial "functions/get_icon" (dict "name" .icon "attributes" "aria-hidden=\"true\"") }}
+          {{ $label }}
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+{{ end }}

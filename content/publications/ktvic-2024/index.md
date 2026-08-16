@@ -8,6 +8,7 @@ authors:
 date: '2024-05-01'
 publication_types: ['article']
 publication: 'ArXiv preprint, 2024'
+venue: 'arXiv 2024'
 summary: 'Introduces KTVIC, a life-domain Vietnamese image captioning dataset for benchmarking multimodal models.'
 featured: false
 ---

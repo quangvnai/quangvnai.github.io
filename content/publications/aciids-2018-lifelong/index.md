@@ -10,6 +10,7 @@ authors:
 date: '2018-03-01'
 publication_types: ['paper-conference']
 publication: 'Asian Conference on Intelligent Information and Database Systems (ACIIDS) 2018'
+venue: 'ACIIDS 2018'
 summary: 'Introduces a lifelong topic modeling pipeline tailored for Vietnamese multi-label text classification.'
 featured: false
 ---

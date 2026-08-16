@@ -1,0 +1,41 @@
+{{/* Full publication list, grouped by year.
+
+     Replaces the flat run of 18 unbroken citations with year anchors, a venue
+     badge per entry and the per-paper link row, so the list can be scanned
+     rather than read.
+*/}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{ $folders := $block.content.filters.folders | default (slice "publications") }}
+{{ $query := where site.RegularPages "Section" "in" $folders }}
+{{ $query = sort $query "Date" "desc" }}
+
+{{ partial "qn/section-head" (dict
+  "title" $block.content.title
+  "lead" $block.content.text
+  "page" $page) }}
+
+<div class="qn-pub-list">
+  {{ range $query.GroupByDate "2006" "desc" }}
+    <h3 class="qn-year" id="year-{{ .Key }}">{{ .Key }}</h3>
+    <div>
+      {{ range .Pages }}
+        {{ $item := . }}
+        <div class="qn-cite">
+          <div class="qn-badge-row mb-1.5">
+            {{ with $item.Params.venue }}<span class="qn-badge">{{ . }}</span>{{ end }}
+            {{ with $item.Params.venue_note }}<span class="qn-badge qn-badge-note">{{ . }}</span>{{ end }}
+          </div>
+          <a href="{{ $item.RelPermalink }}" class="qn-cite-title">{{ $item.Title | markdownify }}</a>
+          <p class="qn-cite-meta">
+            {{ partial "qn/authors" $item }}
+            {{ with $item.Params.publication }}<br>{{ . | markdownify }}{{ end }}
+          </p>
+          {{ partial "qn/pub-links" $item }}
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>

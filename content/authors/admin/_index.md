@@ -1,6 +1,10 @@
 ---
 # Display name
-title: Van-Quang Nguyen
+title: Quang Nguyen
+
+# Name as it appears on papers. Used for the author lists in the publication
+# sections so citations keep matching Google Scholar / DBLP.
+publication_name: Van-Quang Nguyen
 
 # Name pronunciation (optional)
 name_pronunciation: ''
@@ -25,14 +29,15 @@ highlight_name: true
 # Role/position/tagline
 role: ''
 
-# Organizations/Affiliations to display in Biography blox
+# Current affiliation, shown under the name in the hero.
+# Leave `position` empty to show the institution alone.
 organizations:
-  - position: Visiting Researcher
-    name: Tohoku University
-    url: 'https://www.vision.is.tohoku.ac.jp/?page_id=338&lang=en'
-  - position: Postdoctoral Researcher
-    name: RIKEN Center for Advanced Intelligence Project
-    url: 'https://www.vision.is.tohoku.ac.jp/?page_id=338&lang=en'
+  - position: ''
+    name: University of Wollongong
+    url: 'https://www.uow.edu.au/'
+
+# Past affiliations, shown beneath in smaller, quieter type
+previously: 'Previously at RIKEN AIP and Tohoku University'
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -49,10 +54,11 @@ profiles:
     url: https://github.com/quangvnai
 
 interests:
-  - Large Language Models
-  - Agentic Multimodal Large Language Models
-  - Vision-language understanding
-  - MLLMs applications (safety and environment, etc)
+  - Computer Vision
+  - Multimodal AI
+  - Multimodal Large Language Models
+  - Vision-Language Understanding
+  - Multimodal AI Applications
 
 education:
   - area: Ph.D. in Information Sciences
@@ -87,14 +93,33 @@ education:
 
 
 work:
+  # Displayed as years only (`date_format: '2006'` on the experience block).
+  - position: Academic Staff
+    company_name: University of Wollongong
+    company_url: 'https://www.uow.edu.au/'
+    icon: ''
+    date_start: 2026-01-01
+    date_end: ''
+    summary: |
+      Teaching and research on multimodal AI and multimodal large language models.
+
+  - position: Visiting Researcher
+    company_name: Tohoku University, Sendai
+    company_url: 'https://www.vision.is.tohoku.ac.jp/?page_id=338&lang=en'
+    icon: ''
+    date_start: 2022-11-01
+    date_end: ''
+    summary: |
+      Continued collaboration with the Computer Vision group under Prof. Takayuki Okatani.
+
   - position: Postdoctoral Researcher
     company_name: RIKEN AIP, Tokyo
     company_url: 'https://www.riken.jp/en/research/labs/aip/'
     icon: ''
     date_start: 2022-11-01
-    date_end: ''
+    date_end: 2025-10-31
     summary: |
-      Lead research on multimodal large language models for domain-specific perception, planning, and reasoning across robotics, traffic, and environmental intelligence.
+      Worked on multimodal AI (especially MLLMs) for domain-specific perception, planning, and reasoning across robotics, traffic, and environmental intelligence.
   - position: Machine Learning Research Intern
     company_name: Preferred Networks, Tokyo
     company_url: 'https://www.preferred.jp/en/'
@@ -309,8 +334,8 @@ awards:
       Third place in the Vietnam National Chemistry Olympiad competition
 ---
 
-Quang Nguyen is an AI researcher focused on vision-language understanding, Multimodal Large Language Models, and their AI applications. He is currently a Visiting Researcher at Tohoku University, following a 3-year postdoctoral fellowship at RIKEN AIP under Prof. Takayuki Okatani.
+Quang Nguyen is an AI researcher focused on Computer Vision, Multimodal AI especially Multimodal Large Language Models for vision-language understanding, and their AI applications for domain-specific problems. He is currently working at the University of Wollongong, following a 3-year postdoctoral fellowship at RIKEN AIP and a visiting research position at Tohoku University, both under Prof. Takayuki Okatani.
 
-He has published over a dozen papers in premier venues like CVPR, ECCV, EACL, and IJCAI (900+ citations) and frequently mentors graduate students in building AI systems. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
+He has published over a dozen papers in premier venues like CVPR, ECCV, EACL, and IJCAI (1000+ citations) and frequently mentors graduate students in building AI systems. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
 
 Feel free to reach out for collaborations or view his latest work on [Google Scholar](https://scholar.google.com/citations?user=qR180McAAAAJ).

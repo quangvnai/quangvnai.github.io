@@ -10,6 +10,7 @@ authors:
 date: '2023-11-01'
 publication_types: ['article']
 publication: 'ArXiv preprint, 2023'
+venue: 'arXiv 2023'
 summary: 'Defines a visual abductive reasoning benchmark for hazard prediction with a newly collected dataset.'
 featured: false
 ---

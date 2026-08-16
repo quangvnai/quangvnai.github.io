@@ -10,6 +10,7 @@ authors:
 date: '2024-04-01'
 publication_types: ['article-journal']
 publication: 'IEEE Transactions on Intelligent Vehicles (TIV), 2024'
+venue: 'IEEE T-IV 2024'
 summary: 'Studies multimodal perception models for anticipating hazardous events in autonomous driving scenarios.'
 featured: false
 ---

@@ -1,0 +1,35 @@
+{{/* Closing contact block.
+
+     The homepage previously ended on the twenty-fourth honour with no next
+     step. This gives the scroll a destination.
+*/}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $person_page := site.GetPage (printf "/authors/%s" ($block.content.username | default "admin")) }}
+
+<div class="qn-container py-4">
+  <div class="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/60 p-8 md:p-10">
+    <div class="grid gap-6 md:grid-cols-12 md:items-center">
+      <div class="md:col-span-8">
+        {{ with $block.content.eyebrow }}<p class="qn-eyebrow">{{ . }}</p>{{ end }}
+        <h2 class="qn-section-title text-gray-900 dark:text-white">{{ $block.content.title | markdownify }}</h2>
+        {{ with $block.content.text }}
+          <div class="qn-section-lead">{{ . | emojify | $page.RenderString }}</div>
+        {{ end }}
+      </div>
+
+      <div class="md:col-span-4 flex flex-wrap gap-2.5 md:justify-end">
+        {{ range $block.content.buttons }}
+          {{ $ext := path.Ext .url }}
+          <a href="{{ .url | relLangURL }}"
+             {{ if or (hasPrefix .url "http") (hasPrefix .url "mailto:") (eq $ext ".pdf") }}target="_blank" rel="noopener"{{ end }}
+             class="qn-btn {{ if .primary }}qn-btn-primary{{ else }}qn-btn-ghost{{ end }}">
+            {{ with .icon }}{{ partial "functions/get_icon" (dict "name" . "attributes" "aria-hidden=\"true\"") }}{{ end }}
+            {{ .text }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</div>

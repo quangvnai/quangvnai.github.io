@@ -75,3 +75,6 @@ Desktop.ini
 
 *.log
 npm-debug.log*
+
+# Private CV source — kept locally, not published
+resume_temporary.tex

@@ -1,0 +1,744 @@
+/* ==========================================================================
+   Site design layer
+   Loaded automatically by the theme (site_head.html looks for
+   assets/css/custom.css). Everything here is plain CSS — it deliberately
+   avoids !important and avoids targeting Tailwind utility class names, so
+   theme upgrades cannot silently break it.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Display typeface — Newsreader, self-hosted (no external requests)
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/newsreader-vietnamese.woff2') format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+    U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
+    U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/newsreader-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/newsreader-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --qn-display: 'Newsreader', ui-serif, Georgia, 'Times New Roman', serif;
+  --qn-measure: 46rem; /* comfortable reading width for body copy */
+  --qn-wide: 72rem; /* section container */
+  --qn-rule: rgb(var(--hb-primary-200-rgb));
+}
+
+.dark {
+  --qn-rule: rgb(var(--hb-primary-800-rgb));
+}
+
+/* --------------------------------------------------------------------------
+   2. Type scale
+   Display face carries the name and every section heading; Inter carries
+   body copy. Optical sizing keeps the serif from looking spindly large.
+   -------------------------------------------------------------------------- */
+
+.qn-display,
+.qn-section-title,
+.qn-hero-name,
+.qn-pub-title,
+.qn-award-title {
+  font-family: var(--qn-display);
+  font-optical-sizing: auto;
+  letter-spacing: -0.011em;
+}
+
+.qn-hero-name {
+  font-size: clamp(2.25rem, 4.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
+}
+
+/* Section headings: left-aligned with a short rule above, replacing the
+   centred-heading-over-left-aligned-body mismatch. */
+.qn-section-head {
+  max-width: var(--qn-wide);
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.qn-section-title {
+  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Section headings carry a rule that runs from the title to the right edge. */
+.qn-section-head .qn-section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.qn-section-head .qn-section-title::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--qn-rule);
+}
+
+/* Same treatment for headings inside the resume timeline blocks. */
+.qn-block-title {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+  font-family: var(--qn-display);
+  font-optical-sizing: auto;
+  font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.011em;
+}
+
+.qn-block-title::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--qn-rule);
+}
+
+.qn-section-lead {
+  margin-top: 0.75rem;
+  max-width: var(--qn-measure);
+  color: rgb(var(--color-gray-600, 75 85 99));
+}
+
+.dark .qn-section-lead {
+  color: rgb(156 163 175);
+}
+
+.qn-container {
+  max-width: var(--qn-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Hero
+   The hero background is the theme's own `.hbx-bg-gradient` (applied via
+   `css_class` on the block) and is deliberately left untouched.
+   -------------------------------------------------------------------------- */
+
+/* Portrait: thick white ring, so the photo reads as a cameo against the
+   hero gradient. */
+.qn-portrait {
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 4px solid rgb(255 255 255);
+  box-shadow: 0 18px 40px -18px rgb(var(--hb-primary-900-rgb) / 0.4);
+}
+
+.dark .qn-portrait {
+  border-color: rgb(255 255 255);
+  box-shadow: 0 18px 40px -18px rgb(0 0 0 / 0.7);
+}
+
+/* --------------------------------------------------------------------------
+   4. Buttons
+   -------------------------------------------------------------------------- */
+
+.qn-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.15rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.qn-btn svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: none;
+}
+
+/* Hero calls to action: equal-width, centred stack. */
+.qn-hero-cta {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.625rem;
+  width: 100%;
+  max-width: 15rem;
+}
+
+.qn-hero-cta .qn-btn {
+  justify-content: center;
+}
+
+.qn-btn-primary {
+  background: rgb(var(--hb-primary-700-rgb));
+  color: rgb(255 255 255);
+}
+
+.qn-btn-primary:hover {
+  background: rgb(var(--hb-primary-800-rgb));
+}
+
+.qn-btn-ghost {
+  background: transparent;
+  border-color: var(--qn-rule);
+  color: rgb(var(--hb-primary-800-rgb));
+}
+
+.qn-btn-ghost:hover {
+  background: rgb(var(--hb-primary-50-rgb));
+  border-color: rgb(var(--hb-primary-400-rgb));
+}
+
+.dark .qn-btn-primary {
+  background: rgb(var(--hb-primary-500-rgb));
+}
+
+.dark .qn-btn-primary:hover {
+  background: rgb(var(--hb-primary-400-rgb));
+}
+
+.dark .qn-btn-ghost {
+  color: rgb(var(--hb-primary-200-rgb));
+}
+
+.dark .qn-btn-ghost:hover {
+  background: rgb(var(--hb-primary-900-rgb) / 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   5. Selected publications — teaser card
+   -------------------------------------------------------------------------- */
+
+.qn-pub-grid {
+  max-width: var(--qn-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.qn-pub {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.9rem;
+  background: rgb(255 255 255);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.qn-pub:hover {
+  border-color: rgb(var(--hb-primary-300-rgb));
+  box-shadow: 0 12px 28px -20px rgb(var(--hb-primary-900-rgb) / 0.5);
+}
+
+.dark .qn-pub {
+  background: rgb(24 27 34);
+  border-color: rgb(45 51 62);
+}
+
+.dark .qn-pub:hover {
+  border-color: rgb(var(--hb-primary-600-rgb));
+  box-shadow: none;
+}
+
+@media (min-width: 48rem) {
+  .qn-pub {
+    grid-template-columns: 15.5rem 1fr;
+    gap: 1.75rem;
+    align-items: start;
+  }
+}
+
+.qn-pub-teaser {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  background: rgb(var(--hb-primary-50-rgb));
+  border: 1px solid rgb(var(--hb-primary-100-rgb));
+}
+
+.dark .qn-pub-teaser {
+  background: rgb(18 22 30);
+  border-color: rgb(45 51 62);
+}
+
+.qn-pub-teaser img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Placeholder shown until a real figure is dropped into the paper's folder:
+   the venue acronym set in the display face over a quiet ink wash. */
+.qn-pub-teaser-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.75rem;
+  text-align: center;
+  font-family: var(--qn-display);
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.2;
+  color: rgb(var(--hb-primary-500-rgb));
+  background-image:
+    radial-gradient(80% 120% at 15% 0%, rgb(var(--hb-primary-100-rgb)) 0%, transparent 70%),
+    radial-gradient(70% 100% at 100% 100%, rgb(var(--hb-secondary-100-rgb) / 0.7) 0%, transparent 65%);
+}
+
+.dark .qn-pub-teaser-placeholder {
+  color: rgb(var(--hb-primary-300-rgb));
+  background-image:
+    radial-gradient(80% 120% at 15% 0%, rgb(var(--hb-primary-900-rgb)) 0%, transparent 70%),
+    radial-gradient(70% 100% at 100% 100%, rgb(var(--hb-secondary-950-rgb)) 0%, transparent 65%);
+}
+
+.qn-pub-body {
+  min-width: 0;
+}
+
+.qn-pub-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0.5rem 0 0.4rem;
+}
+
+.qn-pub-title a {
+  color: rgb(17 24 39);
+  text-decoration: none;
+}
+
+.qn-pub-title a:hover {
+  color: rgb(var(--hb-primary-700-rgb));
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.dark .qn-pub-title a {
+  color: rgb(243 244 246);
+}
+
+.dark .qn-pub-title a:hover {
+  color: rgb(var(--hb-primary-300-rgb));
+}
+
+.qn-pub-authors {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgb(107 114 128);
+}
+
+.dark .qn-pub-authors {
+  color: rgb(156 163 175);
+}
+
+.qn-pub-authors .qn-me {
+  font-weight: 600;
+  color: rgb(55 65 81);
+}
+
+.dark .qn-pub-authors .qn-me {
+  color: rgb(229 231 235);
+}
+
+.qn-pub-summary {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgb(75 85 99);
+  max-width: var(--qn-measure);
+}
+
+.dark .qn-pub-summary {
+  color: rgb(156 163 175);
+}
+
+/* Venue badge */
+.qn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: rgb(var(--hb-primary-50-rgb));
+  color: rgb(var(--hb-primary-700-rgb));
+  border: 1px solid rgb(var(--hb-primary-200-rgb));
+}
+
+.dark .qn-badge {
+  background: rgb(var(--hb-primary-900-rgb) / 0.55);
+  color: rgb(var(--hb-primary-200-rgb));
+  border-color: rgb(var(--hb-primary-700-rgb));
+}
+
+/* Highlight badge — orals, awards, first-place finishes */
+.qn-badge-note {
+  background: rgb(var(--hb-secondary-50-rgb));
+  color: rgb(var(--hb-secondary-700-rgb));
+  border-color: rgb(var(--hb-secondary-200-rgb));
+}
+
+.dark .qn-badge-note {
+  background: rgb(var(--hb-secondary-950-rgb));
+  color: rgb(var(--hb-secondary-300-rgb));
+  border-color: rgb(var(--hb-secondary-800-rgb));
+}
+
+.qn-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Per-paper links (PDF / arXiv / code / cite) */
+.qn-pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+}
+
+.qn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgb(55 65 81);
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease;
+}
+
+.qn-link:hover {
+  border-color: rgb(var(--hb-primary-400-rgb));
+  color: rgb(var(--hb-primary-700-rgb));
+  background: rgb(var(--hb-primary-50-rgb));
+}
+
+.qn-link svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.dark .qn-link {
+  border-color: rgb(55 62 74);
+  color: rgb(209 213 219);
+}
+
+.dark .qn-link:hover {
+  border-color: rgb(var(--hb-primary-500-rgb));
+  color: rgb(var(--hb-primary-200-rgb));
+  background: rgb(var(--hb-primary-900-rgb) / 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   6. Full publication list, grouped by year
+   -------------------------------------------------------------------------- */
+
+.qn-pub-list {
+  max-width: var(--qn-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.qn-year {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 2.5rem 0 1rem;
+  font-family: var(--qn-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(var(--hb-primary-700-rgb));
+}
+
+.dark .qn-year {
+  color: rgb(var(--hb-primary-300-rgb));
+}
+
+.qn-year::after {
+  content: '';
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--qn-rule);
+}
+
+.qn-cite {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgb(243 244 246);
+}
+
+.dark .qn-cite {
+  border-bottom-color: rgb(39 44 54);
+}
+
+.qn-cite:last-child {
+  border-bottom: none;
+}
+
+.qn-cite-title {
+  font-weight: 600;
+  color: rgb(17 24 39);
+  text-decoration: none;
+}
+
+.qn-cite-title:hover {
+  color: rgb(var(--hb-primary-700-rgb));
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.dark .qn-cite-title {
+  color: rgb(243 244 246);
+}
+
+.dark .qn-cite-title:hover {
+  color: rgb(var(--hb-primary-300-rgb));
+}
+
+.qn-cite-meta {
+  margin-top: 0.2rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: rgb(107 114 128);
+}
+
+.dark .qn-cite-meta {
+  color: rgb(156 163 175);
+}
+
+.qn-cite-meta .qn-me {
+  font-weight: 600;
+  color: rgb(55 65 81);
+}
+
+.dark .qn-cite-meta .qn-me {
+  color: rgb(229 231 235);
+}
+
+/* --------------------------------------------------------------------------
+   7. Honours
+   One row per honour instead of 24 full-bleed cards. Title left, awarder and
+   date right, note underneath — left-aligned, so the eye has one ragged edge
+   to follow rather than two.
+   -------------------------------------------------------------------------- */
+
+.qn-awards {
+  max-width: var(--qn-wide);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.qn-award {
+  display: grid;
+  grid-template-columns: 1.75rem 1fr;
+  gap: 0.35rem 0.9rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid rgb(243 244 246);
+}
+
+.dark .qn-award {
+  border-bottom-color: rgb(39 44 54);
+}
+
+.qn-award:last-child {
+  border-bottom: none;
+}
+
+.qn-award-icon {
+  grid-row: 1 / span 2;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-top: 0.15rem;
+  color: rgb(var(--hb-secondary-600-rgb));
+}
+
+.dark .qn-award-icon {
+  color: rgb(var(--hb-secondary-400-rgb));
+}
+
+.qn-award-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+}
+
+.qn-award-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: rgb(17 24 39);
+  text-decoration: none;
+}
+
+a.qn-award-title:hover {
+  color: rgb(var(--hb-primary-700-rgb));
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.dark .qn-award-title {
+  color: rgb(243 244 246);
+}
+
+.qn-award-meta {
+  font-size: 0.85rem;
+  color: rgb(107 114 128);
+  /* deliberately wraps — nowrap here was the cause of the mobile
+     horizontal-scroll bug */
+  white-space: normal;
+}
+
+.dark .qn-award-meta {
+  color: rgb(156 163 175);
+}
+
+.qn-award-summary {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgb(107 114 128);
+  max-width: var(--qn-measure);
+}
+
+.dark .qn-award-summary {
+  color: rgb(148 163 184);
+}
+
+/* --------------------------------------------------------------------------
+   8. Resume timeline (experience / education blocks)
+   The stock block caps itself at `max-w-prose` and centres its headings.
+   Widen it and align the headings with the rest of the page.
+   -------------------------------------------------------------------------- */
+
+.blox-resume-experience .max-w-prose,
+.blox-resume-skills .max-w-prose,
+.blox-resume-languages .max-w-prose {
+  max-width: var(--qn-wide);
+  padding-inline: 1.5rem;
+}
+
+/* The skills block still ships a centred heading. */
+.blox-resume-skills h3.text-center {
+  text-align: left;
+  font-family: var(--qn-display);
+  font-weight: 600;
+  letter-spacing: -0.011em;
+}
+
+/* --------------------------------------------------------------------------
+   9. Interests
+   Flat, non-interactive chips. The stock pills carried hover, scale and a
+   shadow while being unclickable — a false affordance.
+   -------------------------------------------------------------------------- */
+
+.qn-chip {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.4rem;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  background: rgb(var(--hb-primary-50-rgb));
+  color: rgb(var(--hb-primary-800-rgb));
+  border: 1px solid rgb(var(--hb-primary-100-rgb));
+}
+
+.dark .qn-chip {
+  background: rgb(var(--hb-primary-900-rgb) / 0.45);
+  color: rgb(var(--hb-primary-200-rgb));
+  border-color: rgb(var(--hb-primary-800-rgb));
+}
+
+/* --------------------------------------------------------------------------
+   10. Accessibility & housekeeping
+   -------------------------------------------------------------------------- */
+
+.qn-skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  background: rgb(var(--hb-primary-700-rgb));
+  color: rgb(255 255 255);
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 0.15s ease;
+}
+
+.qn-skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Nothing on the page may exceed the viewport width. */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* Navbar wordmark picks up the display face. */
+.navbar-brand,
+.navbar-brand-logo {
+  font-family: var(--qn-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Hugo Blox promo footer line. */
+footer p.powered-by {
+  display: none;
+}

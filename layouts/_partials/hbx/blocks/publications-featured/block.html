@@ -1,0 +1,78 @@
+{{/* Selected publications — teaser card per paper.
+
+     Each paper renders as: teaser figure | venue badge, title, authors,
+     one-line summary, link row.
+
+     Teaser image: drop a file named `featured.png` (or .jpg/.webp) into the
+     paper's own folder, e.g.
+       content/publications/grit-eccv2022/featured.png
+     Until then a designed placeholder carrying the venue acronym is shown, so
+     a paper without a figure still looks deliberate rather than broken.
+
+     Front matter used:
+       venue        short venue label for the badge, e.g. "ECCV 2022"
+       venue_note   optional highlight, e.g. "Oral" / "Best Paper"
+       summary      one-line description
+*/}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+
+{{ $folders := $block.content.filters.folders | default (slice "publications") }}
+{{ $query := where site.RegularPages "Section" "in" $folders }}
+{{ $query = where $query "Params.featured" "==" true }}
+{{ $query = sort $query "Date" "desc" }}
+{{ with $block.content.count }}{{ if gt . 0 }}{{ $query = first . $query }}{{ end }}{{ end }}
+
+{{ partial "qn/section-head" (dict
+  "title" $block.content.title
+  "lead" $block.content.text
+  "page" $page) }}
+
+<div class="qn-pub-grid">
+  {{ range $query }}
+    {{ $item := . }}
+    {{ $teaser := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+    {{ $venue := $item.Params.venue }}
+
+    <article class="qn-pub">
+      <div class="qn-pub-teaser">
+        {{ if $teaser }}
+          {{ $img := $teaser.Fill "640x400 Center webp q85" }}
+          <a href="{{ $item.RelPermalink }}" tabindex="-1" aria-hidden="true">
+            <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+                 loading="lazy" decoding="async" alt="">
+          </a>
+        {{ else }}
+          <span class="qn-pub-teaser-placeholder" aria-hidden="true">{{ $venue | default ($item.Date.Format "2006") }}</span>
+        {{ end }}
+      </div>
+
+      <div class="qn-pub-body">
+        <div class="qn-badge-row">
+          {{ with $venue }}<span class="qn-badge">{{ . }}</span>{{ end }}
+          {{ with $item.Params.venue_note }}<span class="qn-badge qn-badge-note">{{ . }}</span>{{ end }}
+        </div>
+
+        <h3 class="qn-pub-title">
+          <a href="{{ $item.RelPermalink }}">{{ $item.Title | markdownify }}</a>
+        </h3>
+
+        <p class="qn-pub-authors">{{ partial "qn/authors" $item }}</p>
+
+        {{ with $item.Params.summary }}<p class="qn-pub-summary">{{ . | markdownify }}</p>{{ end }}
+
+        {{ partial "qn/pub-links" $item }}
+      </div>
+    </article>
+  {{ end }}
+</div>
+
+{{ with $block.content.button }}
+  <div class="qn-container mt-8">
+    <a href="{{ .url | relLangURL }}" class="qn-btn qn-btn-ghost">
+      {{ .text }}
+      {{ partial "functions/get_icon" (dict "name" "hero/arrow-right" "attributes" "aria-hidden=\"true\"") }}
+    </a>
+  </div>
+{{ end }}
