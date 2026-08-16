@@ -909,7 +909,37 @@ html {
   letter-spacing: -0.015em;
 }
 
-/* Hugo Blox promo footer line. */
+/* --------------------------------------------------------------------------
+   12. Footer
+   Copyright notice and theme attribution. Quiet — it should be findable
+   without competing with the contact section above it.
+   -------------------------------------------------------------------------- */
+
 footer p.powered-by {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: rgb(107 114 128);
+}
+
+.dark footer p.powered-by {
+  color: rgb(156 163 175);
+}
+
+footer p.powered-by a {
+  color: inherit;
+  text-underline-offset: 0.18em;
+}
+
+footer p.powered-by a:hover {
+  color: rgb(var(--hb-primary-700-rgb));
+}
+
+.dark footer p.powered-by a:hover {
+  color: rgb(var(--hb-primary-300-rgb));
+}
+
+/* The theme's promo button ("Clone this template →"). The attribution text it
+   sits beside stays; this is advertising, not credit. */
+footer p.powered-by a[data-hbx='poweredby_cta'] {
   display: none;
 }

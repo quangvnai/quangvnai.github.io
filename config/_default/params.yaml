@@ -40,7 +40,9 @@ header:
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Van-Quang Nguyen'
+    # `{year}` is replaced with the current year at build time, so the range
+    # stays current on its own. 2025 is the year the site was first published.
+    notice: '© 2025–{year} Van-Quang Nguyen. All rights reserved.'
     license:
       enable: false
       allow_derivatives: false

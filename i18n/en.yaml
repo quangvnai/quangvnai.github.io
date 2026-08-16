@@ -1,0 +1,8 @@
+# Project-level string overrides. Merged over the theme's own i18n/en.yaml,
+# so only the ids that differ need to live here.
+
+# Footer attribution. The theme requires the `{hugoblox}` token (it is replaced
+# with the Hugo Blox link); the rest credits the Academic CV template this site
+# started from, since the layout is only partly my own work.
+- id: published_with
+  translation: Made with {hugoblox}, building on the <a class="underline hover:opacity-100" href="https://hugoblox.com/templates/academic-cv" target="_blank" rel="noopener">Academic CV</a> template.
