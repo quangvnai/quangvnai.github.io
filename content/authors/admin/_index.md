@@ -154,7 +154,7 @@ awards:
   - title: Dean's Award for Excellent PhD Achievements
     selected: true
     url: https://www.tohoku.ac.jp/en/
-    date: '2023-03-01'
+    date: '2023'
     awarder: Tohoku University
     icon: hero/academic-cap
     summary: |
@@ -162,7 +162,7 @@ awards:
   - title: Best Presentation Award for PhD Research
     selected: true
     url: https://www.tohoku.ac.jp/en/
-    date: '2022-03-01'
+    date: '2022'
     awarder: Tohoku University
     icon: hero/trophy
     summary: |
@@ -171,8 +171,8 @@ awards:
   - title: Winner of the Alfred Challenge ECCV 2020
     selected: true
     url: https://www.ecva.net/
-    date: '2020-08-01'
-    awarder: AllenAI & Google (ECCV 2020)
+    date: '2020'
+    awarder: AllenAI & Google
     icon: hero/star
     summary: |
       First place for interactive instruction-following agent competition at ECCV 2020
@@ -180,8 +180,8 @@ awards:
   - title: Honda YES Plus Fellowship
     selected: true
     url: https://www.hondafoundation.jp/en/
-    date: '2019-10-01'
-    awarder: Honda, Japan
+    date: '2019'
+    awarder: Honda Foundation
     icon: hero/academic-cap
     summary: |
       Fellowship to Honda YES awardees who pursue studies in Japan
@@ -189,14 +189,14 @@ awards:
   - title: Japanese Government Scholarship for Master's and Ph.D. Courses
     selected: true
     url: https://www.studyinjapan.go.jp/en/
-    date: '2017-10-01'
+    date: '2017'
     awarder: MEXT, Japan
     icon: hero/academic-cap
     summary: |
       Full scholarship for Ph.D. studies in 2017-2022
   
   - title: Data Science Summer School Scholarship
-    date: '2018-08-01'
+    date: '2018'
     awarder: Gottingen University
     icon: hero/academic-cap
     summary: |
@@ -204,121 +204,121 @@ awards:
   
   - title: Honda Young Engineer Scientist Award
     url: https://www.hondafoundation.jp/en/
-    date: '2017-12-01'
+    date: '2017'
     awarder: Honda Foundation
     icon: hero/trophy
     summary: |
       For top 10 engineering students in Vietnam.
   
   - title: Third Prize of National Scientific Student Research Conference
-    date: '2017-10-01'
+    date: '2017'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
       Recognized for outstanding research presentation at the national level
 
   - title: Excellent Thesis Award
-    date: '2017-06-01'
-    awarder: Vietnam National University (UET-VNU)
+    date: '2017'
+    awarder: VNU-UET
     icon: hero/academic-cap
     summary: |
       Best Bachelor's thesis with highest score 10/10
   
   - title: First Prize of Scientific Student Research Conference
-    date: '2017-01-01'
+    date: '2017'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
       First place award for research presentation at the national conference
   
   - title: Excellent Student Award
-    date: '2017-01-01'
-    awarder: Vietnam National University (UET-VNU)
+    date: '2017'
+    awarder: VNU-UET
     icon: hero/academic-cap
     summary: |
       Highest GPA among the K57 cohort
   
   - title: American Chamber (AmCham) Scholarship
-    date: '2017-05-01'
-    awarder: American Chamber and the US Embassy
+    date: '2017'
+    awarder: US Embassy
     icon: hero/academic-cap
     summary: |
       Scholarship awarded by the American Chamber of Commerce and the US Embassy in Vietnam
   
   - title: Fostering ASEAN Future Leaders Scholarship
     selected: true
-    date: '2015-09-01'
-    awarder: Korea
+    date: '2015'
+    awarder: South Korea
     icon: hero/academic-cap
     summary: |
       Fully funded scholarship for one-year exchange program in South Korea in 2015-2016
   
   - title: Machine Learning Summer School Scholarship
-    date: '2015-08-01'
+    date: '2015'
     awarder: Kyoto University
     icon: hero/academic-cap
     summary: |
       Selected to attend Machine Learning Summer School at Kyoto University, Japan
   
   - title: Merit-based University Scholarships
-    date: '2013-01-01'
-    awarder: UET-VNU
+    date: '2013'
+    awarder: VNU-UET
     icon: hero/academic-cap
     summary: |
       Received merit-based scholarships throughout undergraduate studies (2013-2017)
   
   - title: Shinnyo-en Scholarships
-    date: '2012-11-01'
-    awarder: Japan
+    date: '2012'
+    awarder: Shinnyoen, Japan
     icon: hero/academic-cap
     summary: |
-      Awarded in 3 consecutive years (2013-2016) for academic excellence
+      Awarded in 3 consecutive years (2013-2016) for academic excellence from Shinnyo-en Foundation, Japan.
   
   - title: Hoa Trang Nguyen Award
     selected: true
-    date: '2012-10-01'
+    date: '2012'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
       Prestigious award recognizing outstanding academic achievement
   
   - title: Second Highest Score in University Entrance Examination
-    date: '2012-01-01'
-    awarder: Vietnam
+    date: '2012'
+    awarder: VNU-UET
     icon: hero/academic-cap
     summary: |
       Achieved the second highest score in the UET entrance examination
   
   - title: Merit-based New South Wales University Scholarship
-    date: '2012-06-01'
-    awarder: Australia
+    date: '2012'
+    awarder: UNSW, Australia
     icon: hero/academic-cap
     summary: |
       Merit-based cholarship from University of New South Wales, Australia
 
   - title: First Prize of Vietnam National Chemistry Olympiad
-    date: '2012-01-01'
+    date: '2012'
     awarder: Vietnam
     icon: hero/trophy
     summary: |
       First place in the National Chemistry Olympiad competition
 
   - title: Telecom Corporation Scholarship
-    date: '2012-01-01'
-    awarder: Vietnam
+    date: '2012'
+    awarder: Telecom Vietnam
     icon: hero/academic-cap
     summary: |
       Scholarship awarded by Vietnam Telecom Corporation for academic excellence
   
   - title: Odon Vallet Scholarship for Top High-School Students
-    date: '2011-06-01'
+    date: '2011'
     awarder: Odon Vallet, France
     icon: hero/academic-cap
     summary: |
-      Prestigious scholarship for top high-school students in Vietnam
+      Prestigious scholarship for top high-school students in Vietnam from Odon Vallet Foundation, France
   
   - title: Third Prize of National Chemistry Olympiad
-    date: '2011-01-01'
+    date: '2011'
     awarder: Vietnam
     icon: hero/trophy
     summary: |

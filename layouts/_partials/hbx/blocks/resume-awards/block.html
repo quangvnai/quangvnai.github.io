@@ -39,7 +39,7 @@
 
 <div class="qn-awards">
   {{ range $selected }}
-    {{ partial "qn/award-row" (dict "award" . "format" $block.design.date_format) }}
+    {{ partial "qn/award-row" (dict "award" .) }}
   {{ end }}
 
   {{ with $rest }}
@@ -51,7 +51,7 @@
       </summary>
       <div class="qn-awards-rest">
         {{ range . }}
-          {{ partial "qn/award-row" (dict "award" . "format" $block.design.date_format) }}
+          {{ partial "qn/award-row" (dict "award" .) }}
         {{ end }}
       </div>
     </details>

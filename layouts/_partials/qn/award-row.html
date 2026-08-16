@@ -1,7 +1,10 @@
 {{/* One honour row.
-     Input: dict { "award" map, "format" string } */}}
+     Input: dict { "award" map }
+
+     Awards are dated by year only. Front matter carries bare years ('2023'),
+     which `time` cannot parse, so pass those through untouched and only
+     reach for the parser when a full date shows up. */}}
 {{ $a := .award }}
-{{ $fmt := .format | default "January 2006" }}
 <div class="qn-award">
   <div class="qn-award-icon">
     {{ partial "functions/get_icon" (dict
@@ -17,7 +20,14 @@
     {{ end }}
     <span class="qn-award-meta">
       {{ with $a.awarder }}{{ . }}{{ end }}
-      {{ with $a.date }} · {{ (time .) | time.Format $fmt }}{{ end }}
+      {{ with $a.date }}
+        {{ $d := printf "%v" . }}
+        {{ $year := $d }}
+        {{ if not (findRE `^\d{4}$` $d) }}
+          {{ $year = (time $d) | time.Format "2006" }}
+        {{ end }}
+        · {{ $year }}
+      {{ end }}
     </span>
   </div>
 
