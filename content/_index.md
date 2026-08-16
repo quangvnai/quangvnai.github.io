@@ -96,15 +96,13 @@ sections:
     id: contact
     content:
       title: 'Open to collaboration'
-      text: 'I am always glad to hear from researchers and students working on multimodal models, or anyone applying them to cross-domain problems. Feel free to reach out for potential collaborations.'
+      text: 'Im glad to hear from researchers and students working on multimodal models, or anyone applying them to cross-domain problems. Feel free to reach out for potential collaborations.'
       buttons:
         - text: 'Email me'
           url: 'mailto:vanquangn@uow.edu.au'
           icon: 'hero/envelope'
           primary: true
-        - text: 'GitHub'
-          url: 'https://github.com/quangvnai'
-          icon: 'brands/github'
+
     design:
       spacing:
         padding: ['4rem', 0, '4rem', 0]

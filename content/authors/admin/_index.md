@@ -56,9 +56,9 @@ profiles:
 interests:
   - Computer Vision
   - Multimodal AI
-  - Multimodal Large Language Models
-  - Vision-Language Understanding
+  - (M)LLMs
   - Multimodal AI Applications
+  - Vision-Language Understanding
 
 education:
   - area: Ph.D. in Information Sciences
@@ -156,7 +156,7 @@ awards:
     url: https://www.tohoku.ac.jp/en/
     date: '2023'
     awarder: Tohoku University
-    icon: hero/academic-cap
+    icon: hero/trophy
     summary: |
       Recognized for outstanding Ph.D. research in multimodal AI
   - title: Best Presentation Award for PhD Research
@@ -173,7 +173,7 @@ awards:
     url: https://www.ecva.net/
     date: '2020'
     awarder: AllenAI & Google
-    icon: hero/star
+    icon: hero/trophy
     summary: |
       First place for interactive instruction-following agent competition at ECCV 2020
   
@@ -327,6 +327,6 @@ awards:
 
 Quang Nguyen is an AI researcher focused on Computer Vision, Multimodal AI especially Multimodal Large Language Models for vision-language understanding, and their AI applications for domain-specific problems. He is currently working at the University of Wollongong, following a 3-year postdoctoral fellowship at RIKEN AIP and a visiting research position at Tohoku University.
 
-He has published over a several papers in premier venues like CVPR, ECCV, EACL, and IJCAI with 1000+ citations. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
+He has published research papers in international venues like CVPR, ECCV, EACL, and IJCAI with 1000+ citations. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
 
 Feel free to reach out for collaborations!
