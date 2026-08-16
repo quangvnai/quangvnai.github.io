@@ -9,6 +9,10 @@ cascade:
     type: docs
     params:
       show_breadcrumb: true
+  - build:
+      render: never
+      list: never
+      publishResources: false
 
 sections:
   - block: collection
@@ -25,4 +29,12 @@ sections:
       show_date: false
       show_read_more: false
       columns: 1
+
+# Template demo content — excluded from the build.
+# Delete this folder when you no longer need the examples.
+build:
+  render: never
+  list: never
+  publishResources: false
+
 ---

@@ -1,0 +1,8 @@
+{{/* Shared section header: display heading with a rule running off to the
+     right, plus an optional lead paragraph.
+     Inputs: dict { "title" string, "lead" string, "page" Page } */}}
+{{ $page := .page }}
+<div class="qn-section-head">
+  {{ with .title }}<h2 class="qn-section-title text-gray-900 dark:text-white">{{ . | markdownify | emojify }}</h2>{{ end }}
+  {{ with .lead }}<div class="qn-section-lead">{{ . | emojify | $page.RenderString }}</div>{{ end }}
+</div>

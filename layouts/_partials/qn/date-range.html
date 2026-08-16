@@ -1,0 +1,31 @@
+{{/* Render a start–end date range.
+
+     The blocks are configured with a year-only format, which reads well for
+     multi-year roles ("2022 – 2025") but collapses a short internship into a
+     meaningless "2017 – 2017". When both ends land in the same year, this
+     falls back to the precise format so the Fujitsu, Laboro.AI and Preferred
+     Networks internships keep their months.
+
+     Input: dict { "start", "end", "format", "format_precise" } */}}
+{{ $fmt := .format | default "January 2006" }}
+{{ $precise := .format_precise | default "January 2006" }}
+
+{{ $start := .start }}
+{{ $end := .end }}
+
+{{ $s := "" }}
+{{ with $start }}{{ $s = (time .) | time.Format $fmt }}{{ end }}
+{{ $e := i18n "present" | default "Present" }}
+{{ with $end }}{{ $e = (time .) | time.Format $fmt }}{{ end }}
+
+{{/* Same-year range: re-render both ends with the precise format. */}}
+{{ if and $start $end (eq $s $e) }}
+  {{ $s = (time $start) | time.Format $precise }}
+  {{ $e = (time $end) | time.Format $precise }}
+{{ end }}
+
+{{- if not $s -}}
+  {{ $e }}
+{{- else -}}
+  {{ $s }} – {{ $e }}
+{{- end -}}

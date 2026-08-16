@@ -5,126 +5,107 @@ date: 2022-10-24
 type: landing
 
 design:
-  # Default section spacing
-  spacing: '3rem'
+  spacing: '0rem'
 
+# Single-page site. Every nav item is an anchor into a section below;
+# section `id`s must stay in sync with config/_default/menus.yaml.
 sections:
+  # ---------------------------------------------------------------------------
+  # About — portrait, identity, biography, interests, calls to action
+  # ---------------------------------------------------------------------------
   - block: resume-biography-3
+    id: about
     content:
-      # Choose a user profile to display (a folder name within `content/authors/`)
       username: admin
       text: ''
-      # Show a call-to-action button under your biography? (optional)
       headings:
         about: ''
-        education: ''
-        interests: ''
+        interests: 'Research interests'
+      # Rendered as small buttons in the same row as the profile icons.
+      # A button with no `url` renders inert — clicking it does nothing.
+      # Restore `url: '/uploads/CV_April26.pdf'` to make the CV downloadable.
+      buttons:
+        - text: 'CV'
+          label: 'CV available on request'
     design:
-      # Apply a gradient background
+      # Keeps the original site background gradient
       css_class: hbx-bg-gradient
-      # Avatar customization
       avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
-        shape: circle # Options: circle (default), square, rounded
-      spacing:
-        padding: [0, 0, '0.0rem', 0]
+        size: medium
+        shape: circle
 
+  # ---------------------------------------------------------------------------
+  # Publications — selected papers with teaser figures.
+  # The full year-grouped list is available as a `publications-list` block if
+  # it is ever wanted back; Google Scholar covers the rest for now.
+  # ---------------------------------------------------------------------------
+  - block: publications-featured
+    id: publications
+    content:
+      title: 'Selected publications'
+      text: 'A few papers that best represent my current work. See [Google Scholar](https://scholar.google.com/citations?user=qR180McAAAAJ) for the full list.'
+      count: 0 # 0 = show every paper flagged `featured: true`
+    design:
+      spacing:
+        padding: ['4rem', 0, 0, 0]
+
+  # ---------------------------------------------------------------------------
+  # Experience
+  # ---------------------------------------------------------------------------
   - block: resume-experience
     id: experience
     content:
       username: admin
+      show: work
+    design:
+      # Years only; same-year roles fall back to months automatically
+      date_format: '2006'
+      spacing:
+        padding: ['4rem', 0, 0, 0]
+
+  # ---------------------------------------------------------------------------
+  # Education
+  # ---------------------------------------------------------------------------
+  - block: resume-experience
+    id: education
+    content:
+      username: admin
+      show: education
+    design:
+      date_format: '2006'
+      spacing:
+        padding: ['4rem', 0, 0, 0]
+
+  # ---------------------------------------------------------------------------
+  # Honours — the ones flagged `selected: true` show; the rest expand in place
+  # ---------------------------------------------------------------------------
+  - block: resume-awards
+    id: honours
+    content:
+      title: 'Honours'
+      username: admin
     design:
       date_format: 'January 2006'
-      is_education_first: false
       spacing:
-        padding: ['2rem', 0, 0, 0]
-  - block: collection
-    id: publications
+        padding: ['4rem', 0, 0, 0]
+
+  # ---------------------------------------------------------------------------
+  # Closing call to action
+  # ---------------------------------------------------------------------------
+  - block: qn-contact
+    id: contact
     content:
-      title: Publications
-      text: ''
-      count: 0
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
+      title: 'Open to collaboration'
+      text: 'I am always glad to hear from researchers and students working on multimodal models, or anyone applying them to cross-domain problems. Feel free to reach out for potential collaborations.'
+      buttons:
+        - text: 'Email me'
+          url: 'mailto:vanquangn@uow.edu.au'
+          icon: 'hero/envelope'
+          primary: true
+        - text: 'GitHub'
+          url: 'https://github.com/quangvnai'
+          icon: 'brands/github'
     design:
-      view: citation
       spacing:
-        padding: ['2rem', 0, 0, 0]
-  - block: resume-awards
-    content:
-      title: Awards
-      username: admin
-      count: 0
-  # - block: collection
-  #   id: papers
-  #   content:
-  #     title: Featured Publications
-  #     filters:
-  #       folders:
-  #         - publications
-  #       featured_only: true
-  #   design:
-  #     view: article-grid
-  #     columns: 2
-
-  # - block: collection
-  #   id: talks
-  #   content:
-  #     title: Recent & Upcoming Talks
-  #     filters:
-  #       folders:
-  #         - events
-  #   design:
-  #     view: card
-  # - block: collection
-  #   id: news
-  #   content:
-  #     title: Recent News
-  #     subtitle: ''
-  #     text: ''
-  #     # Page type to display. E.g. post, talk, publication...
-  #     page_type: blog
-  #     # Choose how many pages you would like to display (0 = all pages)
-  #     count: 10
-  #     # Filter on criteria
-  #     filters:
-  #       author: ''
-  #       category: ''
-  #       tag: ''
-  #       exclude_featured: false
-  #       exclude_future: false
-  #       exclude_past: false
-  #       publication_type: ''
-  #     # Choose how many pages you would like to offset by
-  #     offset: 0
-  #     # Page order: descending (desc) or ascending (asc) date.
-  #     order: desc
-  #   design:
-  #     # Choose a layout view
-  #     view: card
-  #     # Reduce spacing
-  #     spacing:
-  #       padding: [0, 0, 0, 0]
-  - block: cta-card
-    demo: true # Only display this section in the Hugo Blox Builder demo site
-    content:
-      title: 👉 Build your own academic website like this
-      text: |-
-        This site is generated by Hugo Blox Builder - the FREE, Hugo-based open source website builder trusted by 250,000+ academics like you.
-
-        <a class="github-button" href="https://github.com/HugoBlox/hugo-blox-builder" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star HugoBlox/hugo-blox-builder on GitHub">Star</a>
-
-        Easily build anything with blocks - no-code required!
-
-        From landing pages, second brains, and courses to academic resumés, conferences, and tech blogs.
-      button:
-        text: Get Started
-        url: https://hugoblox.com/templates/
-    design:
-      card:
-        # Card background color (CSS class)
-        css_class: 'bg-primary-300 dark:bg-primary-700'
-        css_style: ''
+        padding: ['4rem', 0, '4rem', 0]
 ---

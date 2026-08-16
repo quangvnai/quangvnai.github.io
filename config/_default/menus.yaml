@@ -1,34 +1,21 @@
-# Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-  #     desired widget in your `content/home/` folder.
-  #   The weight parameter defines the order that the links will appear in.
+# Navigation
+#   Single-page site: every item is an anchor into a section of the homepage.
+#   The hashes must match the section `id`s in content/_index.md.
+#   `#top` is the id Hugo Blox puts on <body>.
 
 main:
-  - name: Summary
-    url: /
+  - name: About
+    url: '/#top'
     weight: 10
-  - name: Vitae
-    url: /#experience
-    weight: 11
-
-  - name: Experience
-    url: experience/
-    weight: 12
   - name: Publications
-    url: /#publications
-    weight: 13
-  - name: CV
-    url: /uploads/CV_April26.pdf
-    weight: 14
-  # - name: Talks
-  #   url: /#talks
-  #   weight: 13
-  # - name: News
-  #   url: /#news
-  #   weight: 14
-  # - name: Projects
-  #   url: projects/
-  #   weight: 30
-  # - name: Courses
-  #   url: courses/
-  #   weight: 40
+    url: '/#publications'
+    weight: 20
+  - name: Experience
+    url: '/#experience'
+    weight: 30
+  - name: Education
+    url: '/#education'
+    weight: 40
+  - name: Awards
+    url: '/#honours'
+    weight: 50

@@ -1,0 +1,59 @@
+{{/* Hugo Blox: Awards — site override
+
+     The stock block renders every award as a full-bleed card, which turned 24
+     honours into roughly ten mobile screens. This renders one row per honour,
+     all text left-aligned (the stock right-aligned summary was the hardest
+     part of the page to read).
+
+     Honours marked `selected: true` in the author front matter show by
+     default; the rest sit behind a native <details> disclosure, so the full
+     record expands in place with no JavaScript and no second page.
+*/}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $author := $block.content.username | default "admin" }}
+
+{{ $person_page := site.GetPage (printf "/authors/%s" $author) }}
+{{ if not $person_page }}
+  {{ errorf "Could not find an author page for `%s`." $author }}
+{{ end }}
+
+{{ $awards := sort $person_page.Params.awards "date" "desc" }}
+{{ $total := len $awards }}
+
+{{/* Partition on the `selected` flag. If nothing is flagged, fall back to
+     `count` so the block still behaves sensibly. */}}
+{{ $selected := where $awards "selected" true }}
+{{ $rest := where $awards "selected" "!=" true }}
+{{ if not $selected }}
+  {{ $n := $block.content.count | default 6 }}
+  {{ $selected = first $n $awards }}
+  {{ $rest = after $n $awards }}
+{{ end }}
+
+{{ partial "qn/section-head" (dict
+  "title" $block.content.title
+  "lead" $block.content.text
+  "page" $page) }}
+
+<div class="qn-awards">
+  {{ range $selected }}
+    {{ partial "qn/award-row" (dict "award" . "format" $block.design.date_format) }}
+  {{ end }}
+
+  {{ with $rest }}
+    <details class="qn-awards-more">
+      <summary class="qn-btn qn-btn-ghost qn-awards-toggle">
+        <span class="qn-awards-toggle-more">Show all awards and scholarships ({{ $total }} total)</span>
+        <span class="qn-awards-toggle-less">Show fewer</span>
+        {{ partial "functions/get_icon" (dict "name" "hero/chevron-down" "attributes" "class=\"qn-awards-chevron\" aria-hidden=\"true\"") }}
+      </summary>
+      <div class="qn-awards-rest">
+        {{ range . }}
+          {{ partial "qn/award-row" (dict "award" . "format" $block.design.date_format) }}
+        {{ end }}
+      </div>
+    </details>
+  {{ end }}
+</div>

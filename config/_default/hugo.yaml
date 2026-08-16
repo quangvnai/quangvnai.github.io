@@ -4,9 +4,12 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Website name
-title: Van-Quang Nguyen
+title: Quang Nguyen
 # Website URL
-baseURL: 'https://example.com/'
+# CI overrides this (GitHub Pages passes its own base URL, Vercel passes
+# $VERCEL_PROJECT_PRODUCTION_URL), but it must be correct for local builds,
+# the sitemap and the RSS feed. Change it if you move to a custom domain.
+baseURL: 'https://quangvnai.github.io/'
 
 ############################
 ## LANGUAGE

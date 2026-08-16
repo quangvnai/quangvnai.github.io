@@ -1,21 +1,21 @@
 # SITE SETUP
 # Guide: https://docs.hugoblox.com/tutorial/
 # Documentation: https://docs.hugoblox.com/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
 appearance:
   mode: system
-  color: indigo
+  # Custom theme defined in `assets/css/themes/ink.css`
+  color: ink
 
 # SEO
 marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    org_name: 'University of Wollongong'
+    description: 'Quang Nguyen (Van-Quang Nguyen) — AI researcher at the University of Wollongong, previously RIKEN AIP and Tohoku University, working on multimodal large language models and vision-language understanding. Publications at CVPR, ECCV, EACL, and IJCAI.'
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -35,14 +35,14 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: 'Van-Quang Nguyen'
+      text: 'Quang Nguyen'
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Van-Quang Nguyen'
     license:
-      enable: true
+      enable: false
       allow_derivatives: false
       share_alike: true
       allow_commercial: false
