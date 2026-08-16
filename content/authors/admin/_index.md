@@ -327,6 +327,6 @@ awards:
 
 Quang Nguyen is an AI researcher focused on Computer Vision, Multimodal AI especially Multimodal Large Language Models for vision-language understanding, and their AI applications for domain-specific problems. He is currently working at the University of Wollongong, following a 3-year postdoctoral fellowship at RIKEN AIP and a visiting research position at Tohoku University.
 
-He has published research papers in international venues like CVPR, ECCV, EACL, and IJCAI with 1000+ citations. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
+He has published research papers in international venues like CVPR, ECCV, EACL, and IJCAI. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
 
 Feel free to reach out for collaborations!
