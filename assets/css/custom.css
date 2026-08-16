@@ -811,6 +811,20 @@ a.qn-award-title:hover {
   padding-inline: 1.5rem;
 }
 
+/* Timeline rail. The stock list starts flush with the container, which puts its
+   bubbles 0.7rem left of the honour-row icons below (those begin at the content
+   edge, offset by half the 1.4rem glyph). Shift the whole list — rail, bubbles
+   and text indent together — so both columns of icons share one vertical line
+   down the page. */
+.qn-timeline {
+  margin-inline-start: 0.7rem;
+}
+
+/* Replaces the stock `-start-3`, keeping the bubble centred on the rail. */
+.qn-timeline-icon {
+  inset-inline-start: -0.75rem;
+}
+
 /* The skills block still ships a centred heading. */
 .blox-resume-skills h3.text-center {
   text-align: left;

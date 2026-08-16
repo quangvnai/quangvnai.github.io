@@ -31,10 +31,10 @@
 {{ if and $person.work (ne $show "education") }}
 <div class="w-full">
   <h2 class="qn-block-title text-gray-900 dark:text-white">{{ i18n "experience" | default "Experience" }}</h2>
-  <ol class="relative w-full border-s border-gray-200 dark:border-gray-700">
+  <ol class="qn-timeline relative w-full border-s border-gray-200 dark:border-gray-700">
     {{ range $idx, $key := $person.work }}
     <li class="mb-10 ms-6">
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full qn-timeline-icon ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             {{ if .icon }}
               {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class='w-5 h-5'") }}
             {{else}}
@@ -70,10 +70,10 @@
 {{ if and $person.education (ne $show "work") }}
 <div class="w-full">
   <h2 class="qn-block-title text-gray-900 dark:text-white">{{ i18n "education" }}</h2>
-    <ol class="relative w-full border-s border-gray-200 dark:border-gray-700">
+    <ol class="qn-timeline relative w-full border-s border-gray-200 dark:border-gray-700">
       {{ range $idx, $key := $person.education }}
       <li class="mb-10 ms-6">
-        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full qn-timeline-icon ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
             {{ if .icon }}
             {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class='w-5 h-5 text-primary-800 dark:text-primary-300'") }}
             {{else}}
