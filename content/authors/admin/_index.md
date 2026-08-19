@@ -325,8 +325,8 @@ awards:
       Third place in the Vietnam National Chemistry Olympiad competition
 ---
 
-Quang Nguyen is an AI researcher focused on Computer Vision, Multimodal AI especially Multimodal Large Language Models for vision-language understanding, and their AI applications for domain-specific problems. He is currently working at the University of Wollongong, following a 3-year postdoctoral fellowship at RIKEN AIP and a visiting research position at Tohoku University.
+Hi there! I'm an AI researcher, doing research on Computer Vision, Multimodal AI for vision-language understanding, and their AI applications for domain-specific problems. I am passionate about bridging the gap between foundational AI research and impactful technology with research papers published in international venues like CVPR, ECCV, EACL, and IJCAI.
 
-He has published research papers in international venues like CVPR, ECCV, EACL, and IJCAI. He is passionate about bridging the gap between foundational AI research and practical, impactful technology.
+I'm currently working at the University of Wollongong, Australia. Previously, I had a 3-year postdoctoral fellowship at RIKEN AIP and a visiting research position at Tohoku University, Japan.
 
 Feel free to reach out for collaborations!
